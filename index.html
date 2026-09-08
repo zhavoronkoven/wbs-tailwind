@@ -4,11 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Geist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <title>KRAFTHAUS</title>
     <style type="text/tailwindcss">
-      body {
-        @apply bg-amber-600;
+      @theme {
+        --font-primary: "Geist", sans-serif;
+        --font-title: "Big Shoulders Display", sans-serif;
+        --color-primary: #f2ede3;
+        --color-secondary: #191714;
+        --color-accent: #d6322a;
+        --color-accent-secondary: #ffffff;
+        --color-text-light: #706b65;
+        --color-text-dark: #a39e98;
+        --color-stroke-light: #302b27;
+        --color-stroke-dark: #dfd9ce;
+        --color-card-light: #fbf9f4;
+        --color-card-dark: #100f0d;
+
+        --breakpoint-tablet: 768px;
+        --breakpoint-desktop: 1440px;
+      }
+      @layer base {
+        body {
+          @apply bg-accent-secondary font-primary text-xs desktop:text-lg;
+        }
+        section {
+          @apply py-8 tablet:py-15 desktop:py-35;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+          @apply font-title text-secondary font-black leading-none;
+        }
+        button {
+          @apply font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4;
+        }
+      }
+
+      @layer components {
+        .container-custom {
+          @apply w-full mx-auto px-5 tablet:px-10 desktop:px-20 desktop:max-w-[1440px];
+        }
+        .btn-light {
+          @apply border-1 text-accent-secondary;
+        }
+        .btn-dark {
+          @apply border-1 text-secondary;
+        }
+        .btn-accent {
+          @apply bg-accent text-accent-secondary;
+        }
       }
     </style>
   </head>
