@@ -7,15 +7,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Geist:wght@400;500;600;700&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Geist:wght@400;500;600;700&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <title>KRAFTHAUS</title>
 
     <style type="text/tailwindcss">
       @theme {
-        --font-primary: 'Geist', sans-serif;
-        --font-title: 'Big Shoulders Display', sans-serif;
+        --font-primary: "Geist", sans-serif;
+        --font-title: "Big Shoulders Display", sans-serif;
 
         --color-primary: #f2ede3;
         --color-secondary: #191714;
@@ -34,7 +37,7 @@
 
       @layer base {
         body {
-          @apply bg-accent-secondary font-primary text-xs desktop:text-lg;
+          @apply bg-accent-secondary  font-primary text-xs desktop:text-lg;
         }
 
         section {
@@ -52,7 +55,8 @@
           @apply w-full font-semibold text-[11px] desktop:text-base;
         }
 
-        input, textarea {
+        input,
+        textarea {
           @apply outline-none w-full p-2 desktop:p-3 text-[10px] tablet:text-[11px] desktop:text-[14px] bg-primary rounded desktop:rounded-lg border border-stroke-dark;
         }
       }
@@ -99,44 +103,72 @@
   </head>
   <body>
     <header class="bg-secondary py-5 tablet:py-4 desktop:p">
-      <div class="page-container flex flex-col justify-between tablet:flex-row flex-wrap tablet:flex-nowrap gap-4 items-center">
+      <div
+        class="page-container flex flex-col justify-between tablet:flex-row flex-wrap tablet:flex-nowrap gap-4 items-center"
+      >
         <a class="eyebrow" href="#top">
-            <span class="bg-accent w-3.25 h-3.25 desktop:w-6 desktop:h-6 "></span>
-            <span class="uppercase translate-y-px font-title font-black text-primary text-sm desktop:text-[28px] ">krafthaus</span>
+          <span class="bg-accent w-3.25 h-3.25 desktop:w-6 desktop:h-6"></span>
+          <span
+            class="uppercase translate-y-px font-title font-black text-primary text-sm desktop:text-[28px]"
+            >krafthaus</span
+          >
         </a>
-  
+
         <nav aria-label="Main navigation">
           <ul class="flex flex-wrap justify-center items-center gap-4">
-            <li class="nav-item"><a  href="#programs"></a>programs</li>
-            <li class="nav-item"><a  href="#philosophy"></a>philosophy</li>
-            <li class="nav-item"><a  href="#coaches"></a>coaches</li>
-            <li class="nav-item"><a  href="#memberships"></a>memberships</li>
-            <li class="nav-item"><a  href="#location"></a>location</li>
-            <li class="nav-item"><a  href="#contact"></a>contact</li>
+            <li class="nav-item"><a href="#programs"></a>programs</li>
+            <li class="nav-item"><a href="#philosophy"></a>philosophy</li>
+            <li class="nav-item"><a href="#coaches"></a>coaches</li>
+            <li class="nav-item"><a href="#memberships"></a>memberships</li>
+            <li class="nav-item"><a href="#location"></a>location</li>
+            <li class="nav-item"><a href="#contact"></a>contact</li>
           </ul>
         </nav>
-  
-        <a class="btn-accent tablet:min-w-0 desktop:min-w-[200px]" href="#contact">Join the Haus</a>
+
+        <a
+          class="btn-accent tablet:min-w-0 desktop:min-w-[200px]"
+          href="#contact"
+          >Join the Haus</a
+        >
       </div>
     </header>
 
-    <!-- <section id="hero">
-      <div>
-        <svg></svg>
+    <section
+      class="py-24 desktop:pt-[230px] desktop:pb-[150px] bg-[url(./images/hero-section.png)] bg-no-repeat bg-center bg-cover"
+      id="hero"
+    >
+      <div class="page-container">
+        <div class="max-w-87.5 tablet:max-w-[390px] desktop:max-w-[733px]">
+          <p
+            class="inline-block mb-2 desktop:mb-4 px-1.5 desktop:px-4 py-0.75 desktop:py-1.5 text-[10px] desktop:text-[12px] font-semibold bg-accent text-accent-secondary"
+          >
+            STRENGTH & CONDITIONING · HAMBURG ALTONA
+          </p>
+          <h1
+            class="uppercase mb-6 desktop:mb-[48px] text-6xl desktop:text-[110px] text-primary"
+          >
+            KRAFT IST KEINE AUSREDE
+          </h1>
+          <p class="text-text-dark desktop:text-lg mb-6 desktop:mb-[48px]">
+            No shortcuts. No empty promises. We build uncompromising strength
+            and functional endurance in a raw warehouse studio. Guided by expert
+            coaching, designed for physical longevity.
+          </p>
+          <a class="btn-accent mr-2 desktop:mr-4" href="#contact"
+            >Start Free Trial</a
+          >
+          <a class="btn-light" href="#programs">Explore Programs</a>
+        </div>
       </div>
-      <p></p>
-      <h1></h1>
-      <p></p>
-      <a href="#contact"></a>
-      <a href="#programs"></a>
     </section>
+
     <div>
       <ul>
         <li></li>
         <li></li>
         <li></li>
       </ul>
-    </div> -->
+    </div>
 
     <!-- <section id="philosophy">
       <p></p>
@@ -350,7 +382,8 @@
           </article>
         </li>
       </ul>
-    </section> -->
+    </section>
+    -->
 
     <!-- <section id="memberships">
       <p></p>
@@ -474,67 +507,133 @@
     <section id="contact" class="bg-primary">
       <div class="page-container flex flex-col lg:flex-row">
         <div class="lg:w-2/5 lg:pr-10 mb-10 lg:mb-0">
-          <p class="eyebrow"><span class="eyebrow-icon"></span> <span class="eyebrow-text">First session is on us</span></p>
+          <p class="eyebrow">
+            <span class="eyebrow-icon"></span>
+            <span class="eyebrow-text">First session is on us</span>
+          </p>
           <h2 class="section-title">Book your free trial</h2>
-          <p class="text-text-dark">Ready to push your limits? Claim your complimentary pass and experience our state-of-the-art facility, elite coaching, and motivating community. No commitment required.</p>
+          <p class="text-text-dark">
+            Ready to push your limits? Claim your complimentary pass and
+            experience our state-of-the-art facility, elite coaching, and
+            motivating community. No commitment required.
+          </p>
 
-          <address class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-dark">
-            <p class="mb-8"><span class="block text-text-dark uppercase text-sm">Location</span>
-            Stresemannstraße 375<br>
-            22761 Althona, Hamburg</p>
+          <address
+            class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-dark"
+          >
+            <p class="mb-8">
+              <span class="block text-text-dark uppercase text-sm"
+                >Location</span
+              >
+              Stresemannstraße 375<br />
+              22761 Althona, Hamburg
+            </p>
 
-            <p class="mb-8"><span class="block text-text-dark uppercase text-sm">Club hours</span>
-            Mon–Fri 06:00–22:00<br>
-            Sat 08:00–18:00<br>
-            Sun 09:00–16:00</p>
+            <p class="mb-8">
+              <span class="block text-text-dark uppercase text-sm"
+                >Club hours</span
+              >
+              Mon–Fri 06:00–22:00<br />
+              Sat 08:00–18:00<br />
+              Sun 09:00–16:00
+            </p>
 
-            <p><span class="block text-text-dark uppercase text-sm">Phone Support</span>
-            <a href="tel:+494012345678" title="Contact us">+49 40 1234 5678</a></p>
+            <p>
+              <span class="block text-text-dark uppercase text-sm"
+                >Phone Support</span
+              >
+              <a href="tel:+494012345678" title="Contact us"
+                >+49 40 1234 5678</a
+              >
+            </p>
           </address>
         </div>
 
         <div class="lg:w-3/5 lg:pl-10">
-          <form action="#" method="POST" class="flex flex-col bg-white p-10 rounded-lg border border-stroke-dark shadow-xl">
+          <form
+            action="#"
+            method="POST"
+            class="flex flex-col bg-white p-10 rounded-lg border border-stroke-dark shadow-xl"
+          >
             <h3 class="card-title">Claim Your Pass</h3>
-            <p class="mb-10 text-text-dark">Fill out the form below to secure your trial spot.</p>
-          
+            <p class="mb-10 text-text-dark">
+              Fill out the form below to secure your trial spot.
+            </p>
+
             <div class="mb-5">
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="e.g. Alex Johnson" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g. Alex Johnson"
+              />
             </div>
 
             <div class="flex flex-col xl:flex-row">
               <div class="mb-5 xl:w-1/2 xl:pr-4">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="alex@example.com" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="alex@example.com"
+                />
               </div>
 
               <div class="mb-5 xl:w-1/2 xl:pl-4">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" />
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+49 123 456789"
+                />
               </div>
             </div>
 
             <div class="mb-5">
               <label for="focus">Training Focus</label>
-              <input type="text" id="focus" name="focus" placeholder="Kraft, Strength, Conditioning, HIIT, Not sure yet..." />
+              <input
+                type="text"
+                id="focus"
+                name="focus"
+                placeholder="Kraft, Strength, Conditioning, HIIT, Not sure yet..."
+              />
             </div>
 
             <div class="mb-5">
               <label for="plan">Preferred Plan</label>
-              <input type="text" id="plan" name="plan" placeholder="Base Camp, Performance, Elite, Not sure yet..." />
+              <input
+                type="text"
+                id="plan"
+                name="plan"
+                placeholder="Base Camp, Performance, Elite, Not sure yet..."
+              />
             </div>
 
             <div class="mb-5">
               <label for="notes">Anything Else?</label>
-              <textarea id="notes" name="notes" placeholder="Goals, injuries, questions — anything that helps us prepare for your visit."></textarea>
+              <textarea
+                id="notes"
+                name="notes"
+                placeholder="Goals, injuries, questions — anything that helps us prepare for your visit."
+              ></textarea>
               <p></p>
             </div>
 
-            <p class="text-sm text-text-dark mb-2">Fill in what you know — if you’re not sure yet, we’ll reach out within 24 hours to help you choose.</p>
-            <p class="text-sm text-text-dark mb-10">By submitting this form, you agree to the processing of your personal data in accordance with our Privacy Policy.</p>
+            <p class="text-sm text-text-dark mb-2">
+              Fill in what you know — if you’re not sure yet, we’ll reach out
+              within 24 hours to help you choose.
+            </p>
+            <p class="text-sm text-text-dark mb-10">
+              By submitting this form, you agree to the processing of your
+              personal data in accordance with our Privacy Policy.
+            </p>
 
-            <button type="submit" class="btn-accent">Request My Free Trial</button>
+            <button type="submit" class="btn-accent">
+              Request My Free Trial
+            </button>
           </form>
         </div>
       </div>
@@ -542,32 +641,63 @@
 
     <section id="location" class="bg-secondary">
       <div class="page-container flex flex-col lg:flex-row">
-        <div class="lg:w-3/5 lg:pr-10 h-80 lg:h-auto mb-10 lg:mb-0 invert hue-rotate-180 contrast-90 brightness-95">
-          <iframe class="w-full h-full border-0" src="https://www.openstreetmap.org/export/embed?bbox=9.91745710372925%2C53.562804399573615%2C9.924125075340273%2C53.56645238326248&amp;layer=mapnik&amp;marker=53.5646284307467%2C9.92079108953476"></iframe>
+        <div
+          class="lg:w-3/5 lg:pr-10 h-80 lg:h-auto mb-10 lg:mb-0 invert hue-rotate-180 contrast-90 brightness-95"
+        >
+          <iframe
+            class="w-full h-full border-0"
+            src="https://www.openstreetmap.org/export/embed?bbox=9.91745710372925%2C53.562804399573615%2C9.924125075340273%2C53.56645238326248&amp;layer=mapnik&amp;marker=53.5646284307467%2C9.92079108953476"
+          ></iframe>
         </div>
         <div class="lg:w-2/5 lg:pl-10">
-          <p class="eyebrow"><span class="eyebrow-icon"></span> <span class="eyebrow-text">The Studio</span></p>
-          <h2 class="section-title text-primary">HAMBURG ALTONA HEADQUARTERS</h2>
-          <p class="text-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, facilis nam rerum ducimus aspernatur sed earum, temporibus nemo dolorum eos tenetur facere sequi debitis quod modi aliquam quos quaerat enim?</p>
+          <p class="eyebrow">
+            <span class="eyebrow-icon"></span>
+            <span class="eyebrow-text">The Studio</span>
+          </p>
+          <h2 class="section-title text-primary">
+            HAMBURG ALTONA HEADQUARTERS
+          </h2>
+          <p class="text-text-dark">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+            facilis nam rerum ducimus aspernatur sed earum, temporibus nemo
+            dolorum eos tenetur facere sequi debitis quod modi aliquam quos
+            quaerat enim?
+          </p>
 
-          <address class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-light">
-            <p class="mb-8 text-white"><span class="block text-text-dark uppercase text-sm">Location</span>
-            Stresemannstraße 375<br>
-            22761 Althona, Hamburg</p>
+          <address
+            class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-light"
+          >
+            <p class="mb-8 text-white">
+              <span class="block text-text-dark uppercase text-sm"
+                >Location</span
+              >
+              Stresemannstraße 375<br />
+              22761 Althona, Hamburg
+            </p>
 
-            <p class="text-white"><span class="block text-text-dark uppercase text-sm">Club hours</span>
-            Mon–Fri 06:00–22:00<br>
-            Sat 08:00–18:00<br>
-            Sun 09:00–16:00</p>
+            <p class="text-white">
+              <span class="block text-text-dark uppercase text-sm"
+                >Club hours</span
+              >
+              Mon–Fri 06:00–22:00<br />
+              Sat 08:00–18:00<br />
+              Sun 09:00–16:00
+            </p>
           </address>
         </div>
       </div>
     </section>
 
-    <section id="cta" class="bg-secondary bg-[url(./images/final-cta.png)] bg-cover bg-center">
+    <section
+      id="cta"
+      class="bg-secondary bg-[url(./images/final-cta.png)] bg-cover bg-center"
+    >
       <div class="page-container text-center">
         <h2 class="section-title text-primary">ARE YOU READY TO WORK?</h2>
-        <p class="text-text-dark mb-10">No dynamic signup fees, no sales calls. Pick a tier, claim your intro session, and step under the bar.</p>
+        <p class="text-text-dark mb-10">
+          No dynamic signup fees, no sales calls. Pick a tier, claim your intro
+          session, and step under the bar.
+        </p>
 
         <a href="#" class="btn-accent mr-4">Claim Free Intro Class</a>
         <a href="#" class="btn-light">Contact Coaching Staff</a>
@@ -578,12 +708,17 @@
       <div class="page-container">
         <div class="flex flex-col lg:flex-row mb-4 lg:mb-10">
           <div class="lg:w-1/2 lg:pr-10">
-            <img src="./images/logo.svg" alt="">
-            <p class="text-sm text-text-dark mb-10">Uncompromising strength & conditioning in Hamburg. Built for raw effort and anatomical progress.</p>
+            <img src="./images/logo.svg" alt="" />
+            <p class="text-sm text-text-dark mb-10">
+              Uncompromising strength & conditioning in Hamburg. Built for raw
+              effort and anatomical progress.
+            </p>
           </div>
           <div class="lg:w-1/2 lg:pl-10 flex flex-row flex-wrap">
-            
-            <nav class="w-1/2 lg:w-1/4 mb-4 pr-4" aria-label="Footer navigation">
+            <nav
+              class="w-1/2 lg:w-1/4 mb-4 pr-4"
+              aria-label="Footer navigation"
+            >
               <h3 class="text-accent mb-4">NAVIGATION</h3>
               <ul class="text-sm">
                 <li class="mb-2"><a href="#">Programs</a></li>
@@ -615,14 +750,17 @@
               <h3 class="text-accent mb-4">CONTACT</h3>
               <address class="text-sm not-italic">
                 <p class="mb-2">Stresemannstraße 375, 22761 Altona, Hamburg</p>
-                <p class="mb-2"><a href="tel:+494012345678">+49 40 1234 5678</a></p>
+                <p class="mb-2">
+                  <a href="tel:+494012345678">+49 40 1234 5678</a>
+                </p>
               </address>
             </div>
-
           </div>
         </div>
 
-        <p class="border-t border-stroke-light pt-4 text-text-dark text-sm">© 2024 KRAFTHAUS GmbH. All rights subject to progressive loading.</p>
+        <p class="border-t border-stroke-light pt-4 text-text-dark text-sm">
+          © 2024 KRAFTHAUS GmbH. All rights subject to progressive loading.
+        </p>
       </div>
     </footer>
   </body>
