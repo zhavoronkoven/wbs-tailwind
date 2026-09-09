@@ -80,13 +80,13 @@
       }
 
       @utility btn-light {
-        @apply uppercase font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 border-2 text-accent-secondary;
+        @apply uppercase inline-block cursor-pointer font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 border-2 text-accent-secondary transition duration-200 hover:scale-105;
       }
       @utility btn-dark {
-        @apply uppercase font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 border-2 text-secondary;
+        @apply uppercase inline-block cursor-pointer font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 border-2 text-secondary transition duration-200 hover:scale-105;
       }
       @utility btn-accent {
-        @apply uppercase font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 bg-accent text-accent-secondary;
+        @apply uppercase inline-block cursor-pointer font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 bg-accent text-accent-secondary transition duration-200 hover:scale-105;
       }
 
       @utility input-wrapper {
@@ -395,13 +395,13 @@
     </section> -->
 
     <section id="contact" class="bg-primary">
-      <div class="page-container flex">
-        <div class="w-2/5 pr-10">
+      <div class="page-container flex flex-col lg:flex-row">
+        <div class="lg:w-2/5 lg:pr-10 mb-10 lg:mb-0">
           <p><span class="eyebrow-icon"></span> <span class="eyebrow-text">First session is on us</span></p>
           <h2 class="section-title">Book your free trial</h2>
-          <p class="text-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, facilis nam rerum ducimus aspernatur sed earum, temporibus nemo dolorum eos tenetur facere sequi debitis quod modi aliquam quos quaerat enim?</p>
+          <p class="text-text-dark">Ready to push your limits? Claim your complimentary pass and experience our state-of-the-art facility, elite coaching, and motivating community. No commitment required.</p>
 
-          <address class="m-0 mt-10 p-0 pt-10 bt-1 not-italic border-t border-stroke-dark">
+          <address class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-dark">
             <p class="mb-8"><span class="block text-text-dark uppercase text-sm">Location</span>
             Stresemannstraße 375<br>
             22761 Althona, Hamburg</p>
@@ -416,7 +416,7 @@
           </address>
         </div>
 
-        <div class="w-3/5 pl-10">
+        <div class="lg:w-3/5 lg:pl-10">
           <form action="#" method="POST" class="flex flex-col bg-white p-10 rounded-lg border border-stroke-dark shadow-xl">
             <h3 class="card-title">Claim Your Pass</h3>
             <p class="mb-10 text-text-dark">Fill out the form below to secure your trial spot.</p>
@@ -426,14 +426,16 @@
               <input type="text" id="name" name="name" placeholder="e.g. Alex Johnson" />
             </div>
 
-            <div class="mb-5">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="alex@example.com" />
-            </div>
+            <div class="flex flex-col xl:flex-row">
+              <div class="mb-5 xl:w-1/2 xl:pr-4">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="alex@example.com" />
+              </div>
 
-            <div class="mb-5">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" />
+              <div class="mb-5 xl:w-1/2 xl:pl-4">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" />
+              </div>
             </div>
 
             <div class="mb-5">
@@ -461,42 +463,38 @@
       </div>
     </section>
 
-    <section id="location">
-      <p></p>
-      <h2></h2>
+    <section id="location" class="bg-secondary">
+      <div class="page-container flex flex-col lg:flex-row">
+        <div class="lg:w-3/5 lg:pr-10 h-80 lg:h-auto mb-10 lg:mb-0 invert hue-rotate-180 contrast-90 brightness-95">
+          <iframe class="w-full h-full border-0" src="https://www.openstreetmap.org/export/embed?bbox=9.91745710372925%2C53.562804399573615%2C9.924125075340273%2C53.56645238326248&amp;layer=mapnik&amp;marker=53.5646284307467%2C9.92079108953476"></iframe>
+        </div>
+        <div class="lg:w-2/5 lg:pl-10">
+          <p><span class="eyebrow-icon"></span> <span class="eyebrow-text">The Studio</span></p>
+          <h2 class="section-title text-primary">HAMBURG ALTONA HEADQUARTERS</h2>
+          <p class="text-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, facilis nam rerum ducimus aspernatur sed earum, temporibus nemo dolorum eos tenetur facere sequi debitis quod modi aliquam quos quaerat enim?</p>
 
-      <div>
-        <h3></h3>
-        <p></p>
+          <address class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-dark">
+            <p class="mb-8 text-white"><span class="block text-text-dark uppercase text-sm">Location</span>
+            Stresemannstraße 375<br>
+            22761 Althona, Hamburg</p>
+
+            <p class="text-white"><span class="block text-text-dark uppercase text-sm">Club hours</span>
+            Mon–Fri 06:00–22:00<br>
+            Sat 08:00–18:00<br>
+            Sun 09:00–16:00</p>
+          </address>
+        </div>
       </div>
-
-      <div>
-        <h3></h3>
-        <dl>
-          <div>
-            <dt></dt>
-            <dd></dd>
-          </div>
-          <div>
-            <dt></dt>
-            <dd></dd>
-          </div>
-          <div>
-            <dt></dt>
-            <dd></dd>
-          </div>
-        </dl>
-      </div>
-
-      <iframe title="" src=""></iframe>
     </section>
 
-    <section id="cta">
-      <h2></h2>
-      <p></p>
+    <section id="cta" class="bg-secondary bg-[url(./images/final-cta.png)] bg-cover bg-center">
+      <div class="page-container text-center">
+        <h2 class="section-title text-primary">ARE YOU READY TO WORK?</h2>
+        <p class="text-text-dark mb-10">No dynamic signup fees, no sales calls. Pick a tier, claim your intro session, and step under the bar.</p>
 
-      <a href=""></a>
-      <a href=""></a>
+        <a href="#" class="btn-accent mr-4">Claim Free Intro Class</a>
+        <a href="#" class="btn-light">Contact Coaching Staff</a>
+      </div>
     </section>
 
     <footer>
