@@ -14,8 +14,8 @@
 
     <style type="text/tailwindcss">
       @theme {
-        --font-primary: "Geist", sans-serif;
-        --font-title: "Big Shoulders Display", sans-serif;
+        --font-primary: 'Geist', sans-serif;
+        --font-title: 'Big Shoulders Display', sans-serif;
 
         --color-primary: #f2ede3;
         --color-secondary: #191714;
@@ -233,48 +233,120 @@
       </ul>
     </section> -->
 
-    <!-- <section id="coaches">
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <ul>
+    <section class="bg-primary px-5 tablet:px-10 desktop:px-20" id="coaches">
+      <p class="relative pl-4 pb-2">
+        <span class="absolute left-0 top-1 w-2 h-2 bg-red-600"></span>Unsere
+        Trainer
+      </p>
+      <h2 class="pb-2 text-5xl">Praktiker, keine Influencer</h2>
+      <p class="pb-4">
+        Unsere Trainer verfügen über fundierte wissenschaftliche Qualifikationen
+        und Wettkampftitel im Kraftdreikampf. Keine leere Selbstdarstellung.
+      </p>
+      <ul class="grid grid-cols-1 tablet:grid-cols-3 gap-6 tablet:gap-8">
         <li>
-          <article>
-            <img src="" alt="" />
-            <h3></h3>
-            <p></p>
-            <blockquote></blockquote>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
+          <article class="bg-accent-secondary">
+            <img
+              src="images/instructors/kreutz-instructor.png"
+              alt="Jan Kreutz instructor"
+            />
+            <div class="px-5 tablet:px-10 desktop:px-20 color-secondary">
+              <h3 class="text-2xl pt-3">Jan Kreutz</h3>
+              <p class="text-accent">Leiter Krafttraining</p>
+              <blockquote class="text-text-light pt-2">
+                "Die Ausführung bestimmt das Gewicht. Immer."
+              </blockquote>
+              <ul class="my-4 border-t border-stroke-dark pb-2">
+                <li class="relative pl-4 mt-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  B.Sc. Sportwissenschaften
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  10+ Jahre Erfahrung mit schwerem Langhanteltraining
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  Deutscher Meister im Kraftdreikampf 2022
+                </li>
+              </ul>
+            </div>
           </article>
         </li>
         <li>
-          <article>
-            <img src="" alt="" />
-            <h3></h3>
-            <p></p>
-            <blockquote></blockquote>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
+          <article class="bg-accent-secondary">
+            <img
+              src="images/instructors/brandt-instructor.png"
+              alt="Mara Brandt instructor"
+            />
+            <div class="px-5 tablet:px-10 desktop:px-20 color-secondary">
+              <h3 class="text-2xl pt-3">Mara Brandt</h3>
+              <p class="text-accent">Conditioning-Spezialistin</p>
+              <blockquote class="text-text-light pt-2">
+                Deine Ausdauer ist nur so stark wie dein Pacing im Kern."
+              </blockquote>
+              <ul class="my-4 border-t border-stroke-dark pb-2">
+                <li class="relative pl-4 mt-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  M.Sc. Humanphysiologie
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  Zertifizierte Trainerin für Gewichtheben
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  Aktive Triathletin
+                </li>
+              </ul>
+            </div>
           </article>
         </li>
         <li>
-          <article>
-            <img src="" alt="" />
-            <h3></h3>
-            <p></p>
-            <blockquote></blockquote>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
+          <article class="bg-accent-secondary">
+            <img
+              src="images/instructors/reimann-instructor.png"
+              alt="Lars Reimann instructor"
+            />
+            <div class="px-5 tablet:px-10 desktop:px-20 color-secondary">
+              <h3 class="text-2xl pt-3">Lars Reimann</h3>
+              <p class="text-accent">Regeneration & Anatomie</p>
+              <blockquote class="text-text-light pt-2">
+                "Langlebigkeit ist die wichtigste sportliche Kennzahl."
+              </blockquote>
+              <ul class="my-4 border-t border-stroke-dark pb-2">
+                <li class="relative pl-4 mt-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  Staatlich anerkannter Physiotherapeut
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  FMS Level 2 Zertifizierter Spezialis
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  15 Jahre Erfahrung in der Sportrehabilitation
+                </li>
+              </ul>
+            </div>
           </article>
         </li>
       </ul>
