@@ -7,12 +7,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Geist:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Geist:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="style.css" />
+
     <title>KRAFTHAUS</title>
+
     <style type="text/tailwindcss">
       @theme {
         --font-primary: "Geist", sans-serif;
@@ -32,13 +31,16 @@
         --breakpoint-tablet: 768px;
         --breakpoint-desktop: 1440px;
       }
+
       @layer base {
         body {
           @apply bg-accent-secondary font-primary text-xs desktop:text-lg;
         }
+
         section {
           @apply py-8 tablet:py-15 desktop:py-35;
         }
+
         h1,
         h2,
         h3,
@@ -49,29 +51,29 @@
         label {
           @apply w-full font-semibold text-[11px] desktop:text-base;
         }
+
         input, textarea {
-          @apply w-full p-2 desktop:p-3 text-[10px] tablet:text-[11px] desktop:text-[14px] bg-primary rounded desktop:rounded-lg border border-stroke-dark;
+          @apply outline-none w-full p-2 desktop:p-3 text-[10px] tablet:text-[11px] desktop:text-[14px] bg-primary rounded desktop:rounded-lg border border-stroke-dark;
         }
-
-
       }
+
       @utility page-container {
         @apply container mx-auto px-5 tablet:px-10 desktop:px-20 desktop:max-w-[1440px];
       }
 
-       @utility section-title {
-        @apply uppercase text-4xl mt-2 desktop:text-6xl desktop:mt-4;
+      @utility section-title {
+        @apply uppercase text-4xl my-2 desktop:text-6xl desktop:my-4;
       }
 
       @utility card-title {
         @apply uppercase text-xl desktop:text-4xl;
       }
 
-       @utility eyebrow {
+      @utility eyebrow {
         @apply flex items-center gap-1 py-1 desktop:gap-2 desktop:py-0.5;
       }
       @utility eyebrow-icon {
-        @apply block w-2 h-2 bg-accent desktop:w-3 desktop:h-3;
+        @apply inline-block w-2 h-2 bg-accent desktop:w-3 desktop:h-3;
       }
       @utility eyebrow-text {
         @apply uppercase text-xs font-bold text-text-light tracking-widest desktop:text-base;
@@ -93,7 +95,7 @@
     </style>
   </head>
   <body>
-    <header>
+    <!-- <header>
       <a href="#top">
         <img src="" alt="" />
         <span></span>
@@ -111,9 +113,9 @@
       </nav>
 
       <a href="#contact"></a>
-    </header>
+    </header> -->
 
-    <section id="hero">
+    <!-- <section id="hero">
       <div>
         <svg></svg>
       </div>
@@ -129,9 +131,9 @@
         <li></li>
         <li></li>
       </ul>
-    </div>
+    </div> -->
 
-    <section id="philosophy">
+    <!-- <section id="philosophy">
       <p></p>
       <h2></h2>
       <p></p>
@@ -173,9 +175,9 @@
           <dd></dd>
         </div>
       </dl>
-    </section>
+    </section> -->
 
-    <section id="programs">
+    <!-- <section id="programs">
       <p></p>
       <h2></h2>
       <p></p>
@@ -224,9 +226,9 @@
           </article>
         </li>
       </ul>
-    </section>
+    </section> -->
 
-    <section id="coaches">
+    <!-- <section id="coaches">
       <p></p>
       <h2></h2>
       <p></p>
@@ -271,9 +273,9 @@
           </article>
         </li>
       </ul>
-    </section>
+    </section> -->
 
-    <section id="memberships">
+    <!-- <section id="memberships">
       <p></p>
       <h2></h2>
       <p></p>
@@ -332,9 +334,9 @@
           </article>
         </li>
       </ul>
-    </section>
+    </section> -->
 
-    <section id="community">
+    <!-- <section id="community">
       <img src="" alt="" />
 
       <p></p>
@@ -349,8 +351,9 @@
           <p></p>
         </figcaption>
       </figure>
-    </section>
-    <section id="testimonials">
+    </section> -->
+
+    <!-- <section id="testimonials">
       <p></p>
       <h2></h2>
 
@@ -389,67 +392,73 @@
           </figure>
         </li>
       </ul>
-    </section>
+    </section> -->
 
-    <section id="contact">
-      <form>
-        <h2></h2>
-        <p></p>
+    <section id="contact" class="bg-primary">
+      <div class="page-container flex">
+        <div class="w-2/5 pr-10">
+          <p><span class="eyebrow-icon"></span> <span class="eyebrow-text">First session is on us</span></p>
+          <h2 class="section-title">Book your free trial</h2>
+          <p class="text-text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, facilis nam rerum ducimus aspernatur sed earum, temporibus nemo dolorum eos tenetur facere sequi debitis quod modi aliquam quos quaerat enim?</p>
 
-        <div>
-          <label for="name"></label>
-          <input type="text" id="name" name="name" placeholder="" />
+          <address class="m-0 mt-10 p-0 pt-10 bt-1 not-italic border-t border-stroke-dark">
+            <p class="mb-8"><span class="block text-text-dark uppercase text-sm">Location</span>
+            Stresemannstraße 375<br>
+            22761 Althona, Hamburg</p>
+
+            <p class="mb-8"><span class="block text-text-dark uppercase text-sm">Club hours</span>
+            Mon–Fri 06:00–22:00<br>
+            Sat 08:00–18:00<br>
+            Sun 09:00–16:00</p>
+
+            <p><span class="block text-text-dark uppercase text-sm">Phone Support</span>
+            <a href="tel:+494012345678" title="Contact us">+49 40 1234 5678</a></p>
+          </address>
         </div>
 
-        <div>
-          <label for="email"></label>
-          <input type="email" id="email" name="email" placeholder="" />
+        <div class="w-3/5 pl-10">
+          <form action="#" method="POST" class="flex flex-col bg-white p-10 rounded-lg border border-stroke-dark shadow-xl">
+            <h3 class="card-title">Claim Your Pass</h3>
+            <p class="mb-10 text-text-dark">Fill out the form below to secure your trial spot.</p>
+          
+            <div class="mb-5">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Alex Johnson" />
+            </div>
+
+            <div class="mb-5">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="alex@example.com" />
+            </div>
+
+            <div class="mb-5">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+49 123 456789" />
+            </div>
+
+            <div class="mb-5">
+              <label for="focus">Training Focus</label>
+              <input type="text" id="focus" name="focus" placeholder="Kraft, Strength, Conditioning, HIIT, Not sure yet..." />
+            </div>
+
+            <div class="mb-5">
+              <label for="plan">Preferred Plan</label>
+              <input type="text" id="plan" name="plan" placeholder="Base Camp, Performance, Elite, Not sure yet..." />
+            </div>
+
+            <div class="mb-5">
+              <label for="notes">Anything Else?</label>
+              <textarea id="notes" name="notes" placeholder="Goals, injuries, questions — anything that helps us prepare for your visit."></textarea>
+              <p></p>
+            </div>
+
+            <p class="text-sm text-text-dark mb-2">Fill in what you know — if you’re not sure yet, we’ll reach out within 24 hours to help you choose.</p>
+            <p class="text-sm text-text-dark mb-10">By submitting this form, you agree to the processing of your personal data in accordance with our Privacy Policy.</p>
+
+            <button type="submit" class="btn-accent">Request My Free Trial</button>
+          </form>
         </div>
-
-        <div>
-          <label for="phone"></label>
-          <input type="tel" id="phone" name="phone" placeholder="" />
-        </div>
-
-        <div>
-          <label for="focus"></label>
-          <input type="text" id="focus" name="focus" placeholder="" />
-        </div>
-
-        <div>
-          <label for="plan"></label>
-          <input type="text" id="plan" name="plan" placeholder="" />
-        </div>
-
-        <div>
-          <label for="notes"></label>
-          <textarea id="notes" name="notes" placeholder=""></textarea>
-          <p></p>
-        </div>
-
-        <button type="submit"></button>
-      </form>
-
-      <section id="book-trial">
-        <p></p>
-        <h2></h2>
-        <p></p>
-
-        <dl>
-          <div>
-            <dt></dt>
-            <dd></dd>
-          </div>
-          <div>
-            <dt></dt>
-            <dd></dd>
-          </div>
-          <div>
-            <dt></dt>
-            <dd></dd>
-          </div>
-        </dl>
-      </section>
+      </div>
     </section>
 
     <section id="location">
