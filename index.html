@@ -61,6 +61,10 @@
           @apply font-title text-secondary font-black leading-none;
         }
 
+        p {
+          @apply text-text-dark desktop:text-lg leading-[160%];
+        }
+
         label {
           @apply w-full font-semibold text-[11px] desktop:text-base;
         }
@@ -72,7 +76,7 @@
       }
 
       @utility page-container {
-        @apply container mx-auto px-5 tablet:px-10 desktop:px-20 desktop:max-w-[1440px];
+        @apply container mx-auto px-5 tablet:px-10 tablet:max-w-[1024px] desktop:px-20 desktop:max-w-[1440px];
       }
 
       @utility section-title {
@@ -162,11 +166,11 @@
             STRENGTH & CONDITIONING · HAMBURG ALTONA
           </p>
           <h1
-            class="uppercase mb-6 desktop:mb-[48px] text-6xl desktop:text-[110px] text-primary"
+            class="uppercase mb-6 desktop:mb-[48px] text-6xl desktop:text-[110px] text-primary tracking-tight"
           >
             KRAFT IST KEINE AUSREDE
           </h1>
-          <p class="text-text-dark desktop:text-lg mb-6 desktop:mb-[48px]">
+          <p class="pb-6">
             No shortcuts. No empty promises. We build uncompromising strength
             and functional endurance in a raw warehouse studio. Guided by expert
             coaching, designed for physical longevity.
@@ -251,99 +255,164 @@
       </div>
     </div>
 
-    <!-- <section id="philosophy">
-      <p></p>
-      <h2></h2>
-      <p></p>
+    <section class="bg-primary" id="philosophy">
+      <div
+        class="page-container flex flex-col tablet:grid tablet:grid-cols-2 desktop:grid-cols-[3fr_2fr] gap-5 tablet:gap-x-10 desktop:gap-x-20 desktop:gap-y-10"
+      >
+        <!-- <div class="page-container flex flex-col tablet:flex-wrap gap-5 tablet:gap-10"> -->
+        <div
+          class="flex flex-col gap-4 tablet:gap-5 desktop:gap-10 tablet:max-w-[324px] desktop:max-w-167.5 tablet:justify-center"
+        >
+          <div class="flex flex-col desktop:gap-4">
+            <p class="eybrow">
+              <span class="eyebrow-icon"></span>
+              <span class="eyebrow-text">The Manifesto</span>
+            </p>
+            <h2 class="section-title my-0">
+              WE ARE NOT A HEALTH CLUB. WE ARE A STRENGTH LABORATORY.
+            </h2>
+          </div>
 
-      <ol>
-        <li>
-          <h3></h3>
-          <p></p>
-        </li>
-        <li>
-          <h3></h3>
-          <p></p>
-        </li>
-        <li>
-          <h3></h3>
-          <p></p>
-        </li>
-      </ol>
+          <p class="text-text-light">
+            We do not trade in vanity, mirrors, or screen-heavy distractions.
+            KRAFTHAUS was founded in Hamburg to reclaim the physical truth of
+            conditioning: consistent progression under bar, raw effort, and
+            precise anatomical form.
+          </p>
 
-      <img src="" alt="" />
+          <ol class="flex flex-col gap-3 desktop:gap-6">
+            <li class="flex flex-col gap-px">
+              <div class="flex gap-2 items-center">
+                <span
+                  class="bg-accent  text-center px-1.5 py-1 text-accent-secondary text-[9px] desktop:text-lg font-title w-4.25 desktop:w-8 h-4.25 desktop:h-8"
+                  >1</span
+                >
 
-      <h3></h3>
+                <h3 class="uppercase desktop:text-[22px]">
+                  Coached Every Session
+                </h3>
+              </div>
+              <p class="text-text-light pl-6 desktop:pl-10">
+                You never lift alone. Every class is fully programmed and
+                closely supervised by active practitioners.
+              </p>
+            </li>
+            <li class="flex flex-col gap-px">
+              <div class="flex gap-2 items-center">
+                <span
+                  class="bg-accent inline-block text-center px-1.5 py-1 text-accent-secondary text-[9px] desktop:text-lg font-title w-4.25 desktop:w-8 h-4.25 desktop:h-8"
+                  >2</span
+                >
 
-      <dl>
-        <div>
-          <dt></dt>
-          <dd></dd>
+                <h3 class="uppercase desktop:text-[22px]">
+                  Metric-Driven Progress
+                </h3>
+              </div>
+              <p class="text-text-light pl-6 desktop:pl-10">
+                We track structural outputs, not calories. Your logs dictate
+                your target weight assemblies.
+              </p>
+            </li>
+            <li class="flex flex-col gap-px">
+              <div class="flex gap-2 items-center">
+                <span
+                  class="bg-accent inline-block text-center px-1.5 py-1 text-accent-secondary text-[9px] desktop:text-lg font-title w-4.25 desktop:w-8 h-4.25 desktop:h-8"
+                  >3</span
+                >
+
+                <h3 class="uppercase desktop:text-[22px]">No Mirror Ego</h3>
+              </div>
+              <p class="text-text-light pl-6 desktop:pl-10">
+                No vanity walls. Our focus is entirely centered on functional
+                mechanics and collective drive.
+              </p>
+            </li>
+          </ol>
         </div>
+
         <div>
-          <dt></dt>
-          <dd></dd>
+          <img
+            class="w-full h-full desktop:min-w-[523px] object-cover"
+            src="./images/about.png"
+            alt="Athlete performing a barbell deadlift at KRAFTHAUS, chalk dust rising mid-lift"
+          />
         </div>
-        <div>
-          <dt></dt>
-          <dd></dd>
+
+        <div
+          class="col-span-2 flex flex-col justify-between gap-4 tablet:gap-5 desktop:gap-10"
+        >
+          <h3 class="text-xl desktop:text-[40px]">Built by coaches, not a franchise template.</h3>
+          <dl class="flex justify-between">
+            <div class="tablet:w-full tablet:min-w-[63px] ">
+              <dt class="font-title text-xl desktop:text-3xl font-black">2019</dt>
+              <dd class="text-text-dark font-primary desktop:text-base">Founded</dd>
+            </div>
+            <div class="tablet:w-full tablet:min-w-[63px] ">
+              <dt class="font-title text-xl desktop:text-3xl font-black">450+</dt>
+              <dd class="text-text-dark font-primary desktop:text-base">Members</dd>
+            </div>
+            <div class="tablet:w-full tablet:min-w-[63px] ">
+              <dt class="font-title text-xl desktop:text-3xl font-black">7</dt>
+              <dd class="text-text-dark font-primary desktop:text-base">Coaches</dd>
+            </div>
+            <div class="tablet:w-full tablet:min-w-[63px] ">
+              <dt class="font-title text-xl desktop:text-3xl font-black">600m²</dt>
+              <dd class="text-text-dark font-primary desktop:text-base">Studio size</dd>
+            </div>
+          </dl>
         </div>
-        <div>
-          <dt></dt>
-          <dd></dd>
-        </div>
-      </dl>
-    </section> -->
+      </div>
+    </section>
 
     <!-- <section id="programs">
-      <p></p>
-      <h2></h2>
-      <p></p>
+        <p></p>
+        <h2></h2>
+        <p></p>
 
-      <ul>
-        <li>
-          <article>
-            <img src="" alt="" />
-            <p></p>
-            <h3></h3>
-            <p></p>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <a href=""></a>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="" alt="" />
-            <p></p>
-            <h3></h3>
-            <p></p>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <a href=""></a>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="" alt="" />
-            <p></p>
-            <h3></h3>
-            <p></p>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <a href=""></a>
-          </article>
-        </li>
-      </ul>
+        <ul>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <p></p>
+              <h3></h3>
+              <p></p>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <a href=""></a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <p></p>
+              <h3></h3>
+              <p></p>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <a href=""></a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <p></p>
+              <h3></h3>
+              <p></p>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <a href=""></a>
+            </article>
+          </li>
+        </ul>
     </section> -->
 
     <section class="bg-primary px-5 tablet:px-10 desktop:px-20" id="coaches">
