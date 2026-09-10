@@ -17,8 +17,8 @@
 
     <style type="text/tailwindcss">
       @theme {
-        --font-primary: 'Geist', sans-serif;
-        --font-title: 'Big Shoulders Display', sans-serif;
+        --font-primary: "Geist", sans-serif;
+        --font-title: "Big Shoulders Display", sans-serif;
 
         --color-primary: #f2ede3;
         --color-secondary: #191714;
@@ -37,7 +37,7 @@
 
       @layer base {
         body {
-          @apply bg-accent-secondary font-primary text-xs desktop:text-lg;
+          @apply bg-accent-secondary  font-primary text-xs desktop:text-lg;
         }
 
         section {
@@ -80,17 +80,20 @@
         @apply inline-block w-2 h-2 bg-accent desktop:w-3 desktop:h-3;
       }
       @utility eyebrow-text {
-        @apply uppercase text-xs font-bold text-text-light tracking-widest desktop:text-base;
+        @apply uppercase leading-none inline-block text-xs font-bold text-text-light tracking-widest desktop:text-base;
+      }
+      @utility nav-item {
+        @apply uppercase font-semibold text-text-dark text-[11px] desktop:text-lg;
       }
 
       @utility btn-light {
-        @apply uppercase inline-block cursor-pointer font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 border-2 text-accent-secondary transition duration-200 hover:scale-105;
+        @apply uppercase text-center inline-block cursor-pointer font-title min-w-30 desktop:min-w-[200px] px-4 desktop:px-8 py-2 desktop:py-4 border desktop:border-2 text-accent-secondary transition duration-200 hover:scale-105;
       }
       @utility btn-dark {
-        @apply uppercase inline-block cursor-pointer font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 border-2 text-secondary transition duration-200 hover:scale-105;
+        @apply uppercase text-center inline-block cursor-pointer font-title min-w-30 desktop:min-w-[200px] px-4 desktop:px-8 py-2 desktop:py-4 border desktop:border-2 text-secondary transition duration-200 hover:scale-105;
       }
       @utility btn-accent {
-        @apply uppercase inline-block cursor-pointer font-title min-w-30 desktop:min-w-50 px-4 desktop:px-8 py-2 desktop:py-4 bg-accent text-accent-secondary transition duration-200 hover:scale-105;
+        @apply uppercase text-center inline-block cursor-pointer font-title min-w-30 desktop:min-w-[200px] px-4 desktop:px-8 py-2 desktop:py-4 border desktop:border-2 border-accent bg-accent text-accent-secondary transition duration-200 hover:scale-105;
       }
 
       @utility input-wrapper {
@@ -99,43 +102,73 @@
     </style>
   </head>
   <body>
-    <!-- <header>
-      <a href="#top">
-        <img src="" alt="" />
-        <span></span>
-      </a>
+    <header class="bg-secondary py-5 tablet:py-4 desktop:p">
+      <div
+        class="page-container flex flex-col justify-between tablet:flex-row flex-wrap tablet:flex-nowrap gap-4 items-center"
+      >
+        <a class="eyebrow" href="#top">
+          <span class="bg-accent w-3.25 h-3.25 desktop:w-6 desktop:h-6"></span>
+          <span
+            class="uppercase translate-y-px font-title font-black text-primary text-sm desktop:text-[28px]"
+            >krafthaus</span
+          >
+        </a>
 
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="#programs"></a></li>
-          <li><a href="#philosophy"></a></li>
-          <li><a href="#coaches"></a></li>
-          <li><a href="#memberships"></a></li>
-          <li><a href="#location"></a></li>
-          <li><a href="#contact"></a></li>
-        </ul>
-      </nav>
+        <nav aria-label="Main navigation">
+          <ul class="flex flex-wrap justify-center items-center gap-4">
+            <li class="nav-item"><a href="#programs"></a>programs</li>
+            <li class="nav-item"><a href="#philosophy"></a>philosophy</li>
+            <li class="nav-item"><a href="#coaches"></a>coaches</li>
+            <li class="nav-item"><a href="#memberships"></a>memberships</li>
+            <li class="nav-item"><a href="#location"></a>location</li>
+            <li class="nav-item"><a href="#contact"></a>contact</li>
+          </ul>
+        </nav>
 
-      <a href="#contact"></a>
-    </header> -->
-
-    <!-- <section id="hero">
-      <div>
-        <svg></svg>
+        <a
+          class="btn-accent tablet:min-w-0 desktop:min-w-[200px]"
+          href="#contact"
+          >Join the Haus</a
+        >
       </div>
-      <p></p>
-      <h1></h1>
-      <p></p>
-      <a href="#contact"></a>
-      <a href="#programs"></a>
+    </header>
+
+    <section
+      class="py-24 desktop:pt-[230px] desktop:pb-[150px] bg-[url(./images/hero-section.png)] bg-no-repeat bg-center bg-cover"
+      id="hero"
+    >
+      <div class="page-container">
+        <div class="max-w-87.5 tablet:max-w-[390px] desktop:max-w-[733px]">
+          <p
+            class="inline-block mb-2 desktop:mb-4 px-1.5 desktop:px-4 py-0.75 desktop:py-1.5 text-[10px] desktop:text-[12px] font-semibold bg-accent text-accent-secondary"
+          >
+            STRENGTH & CONDITIONING · HAMBURG ALTONA
+          </p>
+          <h1
+            class="uppercase mb-6 desktop:mb-[48px] text-6xl desktop:text-[110px] text-primary"
+          >
+            KRAFT IST KEINE AUSREDE
+          </h1>
+          <p class="text-text-dark desktop:text-lg mb-6 desktop:mb-[48px]">
+            No shortcuts. No empty promises. We build uncompromising strength
+            and functional endurance in a raw warehouse studio. Guided by expert
+            coaching, designed for physical longevity.
+          </p>
+          <a class="btn-accent mr-2 desktop:mr-4" href="#contact"
+            >Start Free Trial</a
+          >
+          <a class="btn-light" href="#programs">Explore Programs</a>
+        </div>
+      </div>
     </section>
+
     <div>
       <ul>
         <li></li>
         <li></li>
         <li></li>
       </ul>
-    </div> -->
+    </div>
 
     <!-- <section id="philosophy">
       <p></p>
@@ -544,7 +577,7 @@
     <section id="contact" class="bg-primary">
       <div class="page-container flex flex-col lg:flex-row">
         <div class="lg:w-2/5 lg:pr-10 mb-10 lg:mb-0">
-          <p>
+          <p class="eyebrow">
             <span class="eyebrow-icon"></span>
             <span class="eyebrow-text">First session is on us</span>
           </p>
@@ -687,7 +720,7 @@
           ></iframe>
         </div>
         <div class="lg:w-2/5 lg:pl-10">
-          <p>
+          <p class="eyebrow">
             <span class="eyebrow-icon"></span>
             <span class="eyebrow-text">The Studio</span>
           </p>
@@ -702,7 +735,7 @@
           </p>
 
           <address
-            class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-dark"
+            class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-light"
           >
             <p class="mb-8 text-white">
               <span class="block text-text-dark uppercase text-sm"
@@ -741,52 +774,64 @@
       </div>
     </section>
 
-    <footer>
-      <div>
-        <img src="" alt="" />
-        <span></span>
-        <p></p>
+    <footer class="bg-card-dark text-text-dark py-4 tablet:py-8 desktop:py-18">
+      <div class="page-container">
+        <div class="flex flex-col lg:flex-row mb-4 lg:mb-10">
+          <div class="lg:w-1/2 lg:pr-10">
+            <img src="./images/logo.svg" alt="" />
+            <p class="text-sm text-text-dark mb-10">
+              Uncompromising strength & conditioning in Hamburg. Built for raw
+              effort and anatomical progress.
+            </p>
+          </div>
+          <div class="lg:w-1/2 lg:pl-10 flex flex-row flex-wrap">
+            <nav
+              class="w-1/2 lg:w-1/4 mb-4 pr-4"
+              aria-label="Footer navigation"
+            >
+              <h3 class="text-accent mb-4">NAVIGATION</h3>
+              <ul class="text-sm">
+                <li class="mb-2"><a href="#">Programs</a></li>
+                <li class="mb-2"><a href="#">Philosophy</a></li>
+                <li class="mb-2"><a href="#">Coaches</a></li>
+                <li class="mb-2"><a href="#">Memberships</a></li>
+              </ul>
+            </nav>
+
+            <nav class="w-1/2 lg:w-1/4 mb-4 pr-4" aria-label="Legal">
+              <h3 class="text-accent mb-4">LEGAL</h3>
+              <ul class="text-sm">
+                <li class="mb-2"><a href="#">Datenschutz</a></li>
+                <li class="mb-2"><a href="#">Impressum</a></li>
+                <li class="mb-2"><a href="#">AGB</a></li>
+              </ul>
+            </nav>
+
+            <nav class="w-1/2 lg:w-1/4 mb-4 pr-4" aria-label="Social">
+              <h3 class="text-accent mb-4">SOCIAL</h3>
+              <ul class="text-sm">
+                <li class="mb-2"><a href="#">Instagram</a></li>
+                <li class="mb-2"><a href="#">YouTube</a></li>
+                <li class="mb-2"><a href="#">Spotify Playlist</a></li>
+              </ul>
+            </nav>
+
+            <div class="w-1/2 lg:w-1/4 mb-4 pr-4">
+              <h3 class="text-accent mb-4">CONTACT</h3>
+              <address class="text-sm not-italic">
+                <p class="mb-2">Stresemannstraße 375, 22761 Altona, Hamburg</p>
+                <p class="mb-2">
+                  <a href="tel:+494012345678">+49 40 1234 5678</a>
+                </p>
+              </address>
+            </div>
+          </div>
+        </div>
+
+        <p class="border-t border-stroke-light pt-4 text-text-dark text-sm">
+          © 2024 KRAFTHAUS GmbH. All rights subject to progressive loading.
+        </p>
       </div>
-
-      <nav aria-label="Footer navigation">
-        <h3></h3>
-        <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
-      </nav>
-
-      <nav aria-label="Legal">
-        <h3></h3>
-        <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
-      </nav>
-
-      <nav aria-label="Social">
-        <h3></h3>
-        <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
-      </nav>
-
-      <div>
-        <h3></h3>
-        <address>
-          <p></p>
-          <p></p>
-          <a href="tel:"></a>
-          <p></p>
-        </address>
-      </div>
-
-      <p></p>
     </footer>
   </body>
 </html>
