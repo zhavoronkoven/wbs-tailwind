@@ -33,16 +33,6 @@
 
         --breakpoint-tablet: 768px;
         --breakpoint-desktop: 1440px;
-        --animate-ticker-track: scroll 20s linear infinite;
-
-        @keyframes scroll {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-50%);
-          }
-        }
       }
 
       @layer base {
@@ -109,17 +99,10 @@
       @utility input-wrapper {
         @apply w-full flex flex-col gap-1 desktop:gap-2;
       }
-
-      @utility ticker-track-text {
-        @apply eyebrow-text text-xs tablet:text-sm desktop:text-2xl uppercase font-title  text-accent-secondary;
-      }
-      @utility ticker-track-icon {
-        @apply eyebrow-icon w-1 desktop:w-2 h-1 desktop:h-2 bg-accent-secondary;
-      }
     </style>
   </head>
   <body>
-    <header class="bg-secondary py-5 tablet:py-4 desktop:py-6">
+    <header class="bg-secondary py-5 tablet:py-4 desktop:p">
       <div
         class="page-container flex flex-col justify-between tablet:flex-row flex-wrap tablet:flex-nowrap gap-4 items-center"
       >
@@ -179,76 +162,12 @@
       </div>
     </section>
 
-    <div class="bg-accent">
-      <div
-        class="mx-auto overflow-hidden whitespace-nowrap py-2.5 desktop:py-[20px] max-w-360"
-      >
-        <ul
-          class="flex justify-center gap-4 tablet:gap-[34px] desktop:gap-[64px] animate-ticker-track"
-        >
-          <!-- <ul class="flex gap-4 tablet:gap-[34px] desktop:gap-[64px] animate-ticker-track motion-reduce:animate-none"> -->
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">NO SHORTCUTS</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">NO SHORTCUTS</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">NO SHORTCUTS</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
-          </li>
-          <li class="eyebrow gap-2">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
-          </li>
-          <li class="eyebrow gap-2 desktop:hidden">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
-          </li>
-          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
-          </li>
-          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">NO SHORTCUTS</span>
-          </li>
-          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
-          </li>
-          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
-          </li>
-        </ul>
-      </div>
+    <div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
 
     <!-- <section id="philosophy">
@@ -347,16 +266,14 @@
     </section> -->
 
     <section class="bg-primary px-5 tablet:px-10 desktop:px-20" id="coaches">
-      <p class="relative pl-4 pb-2"></p>
-      <div class="eyebrow">
-        <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-        <span>OUR COACHES</span>
-      </div>
-
-      <h2 class="pb-2 text-6xl">PRACTITIONERS, NOT INFLUENCERS</h2>
+      <p class="relative pl-4 pb-2">
+        <span class="absolute left-0 top-1 w-2 h-2 bg-red-600"></span>Unsere
+        Trainer
+      </p>
+      <h2 class="pb-2 text-5xl">Praktiker, keine Influencer</h2>
       <p class="pb-4">
-        Our instructors hold active science credentials and powerlifting titles.
-        No empty visual posing.
+        Unsere Trainer verfügen über fundierte wissenschaftliche Qualifikationen
+        und Wettkampftitel im Kraftdreikampf. Keine leere Selbstdarstellung.
       </p>
       <ul class="grid grid-cols-1 tablet:grid-cols-3 gap-6 tablet:gap-8">
         <li>
@@ -364,27 +281,32 @@
             <img
               src="images/instructors/kreutz-instructor.png"
               alt="Jan Kreutz instructor"
-              class="w-full h-auto object-cover"
             />
             <div class="px-5 tablet:px-10 desktop:px-20 color-secondary">
-              <h3 class="text-2xl pt-3">JAN KREUTZ</h3>
-              <p class="text-accent font-bold text-sm pt-1">HEAD OF STRENGTH</p>
+              <h3 class="text-2xl pt-3">Jan Kreutz</h3>
+              <p class="text-accent">Leiter Krafttraining</p>
               <blockquote class="text-text-light pt-2">
-                "Form dictates load. Always."
+                "Die Ausführung bestimmt das Gewicht. Immer."
               </blockquote>
               <ul class="my-4 border-t border-stroke-dark pb-2">
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>B.Sc. Sports Science</span>
-                </div>
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>10+ Years Heavy Barbell Prep</span>
-                </div>
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>German Powerlifting Gold 2022</span>
-                </div>
+                <li class="relative pl-4 mt-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  B.Sc. Sportwissenschaften
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  10+ Jahre Erfahrung mit schwerem Langhanteltraining
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  Deutscher Meister im Kraftdreikampf 2022
+                </li>
               </ul>
             </div>
           </article>
@@ -394,27 +316,32 @@
             <img
               src="images/instructors/brandt-instructor.png"
               alt="Mara Brandt instructor"
-              class="w-full h-auto object-cover"
             />
             <div class="px-5 tablet:px-10 desktop:px-20 color-secondary">
-              <h3 class="text-2xl pt-3">MARA BRANDT</h3>
-              <p class="text-accent font-bold text-sm pt-1">CONDITIONING SPECIALIST</p>
+              <h3 class="text-2xl pt-3">Mara Brandt</h3>
+              <p class="text-accent">Conditioning-Spezialistin</p>
               <blockquote class="text-text-light pt-2">
-                "Your engine is only as strong as its core pacing."
+                Deine Ausdauer ist nur so stark wie dein Pacing im Kern."
               </blockquote>
               <ul class="my-4 border-t border-stroke-dark pb-2">
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>M.Sc. Human Physiology</span>
-                </div>
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>Olympic Lifting Coach Certification</span>
-                </div>
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>Competitive Triathlete</span>
-                </div>
+                <li class="relative pl-4 mt-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  M.Sc. Humanphysiologie
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  Zertifizierte Trainerin für Gewichtheben
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  Aktive Triathletin
+                </li>
               </ul>
             </div>
           </article>
@@ -424,27 +351,32 @@
             <img
               src="images/instructors/reimann-instructor.png"
               alt="Lars Reimann instructor"
-              class="w-full h-auto object-cover"
             />
             <div class="px-5 tablet:px-10 desktop:px-20 color-secondary">
-              <h3 class="text-2xl pt-3">LARS REIMANN</h3>
-              <p class="text-accent font-bold text-sm pt-1">RECOVERY & ANATOMY</p>
+              <h3 class="text-2xl pt-3">Lars Reimann</h3>
+              <p class="text-accent">Regeneration & Anatomie</p>
               <blockquote class="text-text-light pt-2">
-                "Longevity is the ultimate athletic metric."
+                "Langlebigkeit ist die wichtigste sportliche Kennzahl."
               </blockquote>
               <ul class="my-4 border-t border-stroke-dark pb-2">
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>Physiotherapist Practitioner</span>
-                </div>
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>FMS Level 2 Certified Specialist</span>
-                </div>
-                <div class="eyebrow">
-                  <span class="eyebrow-icon w-2 h-2 inline-block p-1"></span>
-                  <span>15 Years Athletic Restoration</span>
-                </div>
+                <li class="relative pl-4 mt-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  Staatlich anerkannter Physiotherapeut
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  FMS Level 2 Zertifizierter Spezialis
+                </li>
+                <li class="relative pl-4">
+                  <span
+                    class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-red-600"
+                  ></span>
+                  15 Jahre Erfahrung in der Sportrehabilitation
+                </li>
               </ul>
             </div>
           </article>
@@ -452,9 +384,8 @@
       </ul>
     </section>
 
-
     <section class="bg-secondary text-primary" id="memberships">
-      <div class="page-container px-3">
+      <div class="page-container">
         <div class="eyebrow">
           <span class="eyebrow-icon"></span>
           <span class="eyebrow-text">MEMBERSHIP TIERS</span>
@@ -466,7 +397,7 @@
         </p>
       </div>
       <ul
-        class="page-container my-4 p-3 pb-3 grid grid-cols-1 tablet:grid-cols-3 gap-6 tablet:gap-8"
+        class="my-4 p-3 pb-3 grid grid-cols-1 tablet:grid-cols-3 gap-6 tablet:gap-8"
       >
         <li class="relative pl-4 mt-4 bg-primary text-secondary">
           <article>
@@ -502,12 +433,14 @@
         </li>
         <li class="relative pl-4 mt-4">
           <article>
-            <div class="p-3 border border-[#D6322A]">
+            <div class="p-3 border border-red-600">
               <div class="flex gap-3">
                 <div>
                   <h3 class="text-3xl pt-5 pb-5 text-white">PERFORMANCE</h3>
                 </div>
-                <div><p class="mt-6 p-0.5 bg-[#D6322A] text-xs">RECOMMENDED</p></div>
+                <div>
+                  <p class="mt-6 p-0.5 bg-red-600 text-xs">RECOMMENDED</p>
+                </div>
               </div>
               <p class="pb-4">
                 <span class="text-5xl">€129</span>
@@ -537,7 +470,7 @@
               </ul>
               <div class="pb-4 flex justify-center">
                 <button
-                  class="btn-dark w-full btn-accent text-white border-accent"
+                  class="btn-dark w-full border border-red-600 bg-red-700 text-white"
                 >
                   SELECT PLAN
                 </button>
@@ -582,14 +515,29 @@
         </li>
       </ul>
     </section>
- 
 
-    <!-- <section id="community">
-      <img src="" alt="" />
+    <section class="bg-primary" id="community">
+      <div
+        class="page-container mx-auto max-w-7xl grid grid-cols-1 desktop:grid-cols-2 gap-8 desktop:items-center desktop:m-10 desktop:mx-auto"
+      >
+        <img
+          src="images/community.png"
+          alt="Community"
+          class="w-full h-full object-cover desktop:w-[800px] desktop:justify-self-center"
+        />
 
-      <p></p>
-      <h2></h2>
-      <p></p>
+        <div class="self-start">
+          <div class="eyebrow pb-5">
+            <span class="eyebrow-icon"></span>
+            <span class="eyebrow-text">THE COMMUNITY</span>
+          </div>
+          <h2 class="text-6xl pb-4">REAL EFFORT BREEDS REAL RESPECT</h2>
+          <p class="desktop:pt-15 pb-10 text-text-dark">
+            At KRAFTHAUS, we lift together. We run a collective whiteboard
+            culture where the veteran lifter supports the newcomer. Every drop
+            of sweat is shared, and every breakthrough is celebrated by the
+            whole room.
+          </p>
 
           <figure>
             <blockquote class="pt-2 pb-2 font-bold text-l desktop:pt-10">
@@ -605,7 +553,9 @@
               />
               <div>
                 <p class="font-bold">MARKUS WEBER</p>
-                <p class="text-sm text-text-dark">Member since Oct 2023 · Hamburg</p>
+                <p class="text-sm text-text-dark">
+                  Member since Oct 2023 · Hamburg
+                </p>
               </div>
             </figcaption>
           </figure>
