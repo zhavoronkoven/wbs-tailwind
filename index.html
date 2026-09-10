@@ -17,8 +17,8 @@
 
     <style type="text/tailwindcss">
       @theme {
-        --font-primary: "Geist", sans-serif;
-        --font-title: "Big Shoulders Display", sans-serif;
+        --font-primary: 'Geist', sans-serif;
+        --font-title: 'Big Shoulders Display', sans-serif;
 
         --color-primary: #f2ede3;
         --color-secondary: #191714;
@@ -383,7 +383,6 @@
         </li>
       </ul>
     </section>
-    -->
 
     <section class="bg-secondary text-primary" id="memberships">
       <div class="page-container">
@@ -439,7 +438,9 @@
                 <div>
                   <h3 class="text-3xl pt-5 pb-5 text-white">PERFORMANCE</h3>
                 </div>
-                <div><p class="mt-6 p-0.5 bg-red-600 text-xs">RECOMMENDED</p></div>
+                <div>
+                  <p class="mt-6 p-0.5 bg-red-600 text-xs">RECOMMENDED</p>
+                </div>
               </div>
               <p class="pb-4">
                 <span class="text-5xl">€129</span>
@@ -514,24 +515,51 @@
         </li>
       </ul>
     </section>
-    -->
 
-    <!-- <section id="community">
-      <img src="" alt="" />
+    <section class="p-4 desktop:p-10 bg-primary" id="community">
+      <div
+        class="grid grid-cols-1 desktop:grid-cols-2 gap-8 desktop:items-center pt-18 desktop:m-10"
+      >
+        <img
+          src="images/community.png"
+          alt="Community"
+          class="w-full h-full object-cover desktop:w-[600px] desktop:justify-self-center"
+        />
 
-      <p></p>
-      <h2></h2>
-      <p></p>
+        <div class="self-start">
+          <div class="eyebrow pb-5">
+            <span class="eyebrow-icon"></span>
+            <span class="eyebrow-text">THE COMMUNITY</span>
+          </div>
+          <h2 class="text-6xl pb-4">REAL EFFORT BREEDS REAL RESPECT</h2>
+          <p class="desktop:pt-15 pb-10 text-text-dark">
+            At KRAFTHAUS, we lift together. We run a collective whiteboard
+            culture where the veteran lifter supports the newcomer. Every drop
+            of sweat is shared, and every breakthrough is celebrated by the
+            whole room.
+          </p>
 
-      <figure>
-        <blockquote></blockquote>
-        <figcaption>
-          <img src="" alt="" />
-          <p></p>
-          <p></p>
-        </figcaption>
-      </figure>
-    </section> -->
+          <figure>
+            <blockquote class="pt-2 pb-2 font-bold text-l desktop:pt-10">
+              "I've trained in standard fitness chains for years and hit a solid
+              ceiling. Six months at KRAFTHAUS completely changed how I move,
+              live, and progress. The coaching is surgical."
+            </blockquote>
+            <figcaption class="flex items-center gap-3 desktop:pt-5">
+              <img
+                src="images/avatars/avatar-markus.jpg"
+                alt=""
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-bold">MARKUS WEBER</p>
+                <p class="text-sm text-text-dark">Member since Oct 2023 · Hamburg</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
     <!-- <section id="testimonials">
       <p></p>
