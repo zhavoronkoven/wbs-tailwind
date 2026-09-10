@@ -33,6 +33,16 @@
 
         --breakpoint-tablet: 768px;
         --breakpoint-desktop: 1440px;
+        --animate-ticker-track: scroll 20s linear infinite;
+
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
       }
 
       @layer base {
@@ -99,10 +109,17 @@
       @utility input-wrapper {
         @apply w-full flex flex-col gap-1 desktop:gap-2;
       }
+
+      @utility ticker-track-text {
+        @apply eyebrow-text text-xs tablet:text-sm desktop:text-2xl uppercase font-title  text-accent-secondary;
+      }
+      @utility ticker-track-icon {
+        @apply eyebrow-icon w-1 desktop:w-2 h-1 desktop:h-2 bg-accent-secondary;
+      }
     </style>
   </head>
   <body>
-    <header class="bg-secondary py-5 tablet:py-4 desktop:p">
+    <header class="bg-secondary py-5 tablet:py-4 desktop:py-6">
       <div
         class="page-container flex flex-col justify-between tablet:flex-row flex-wrap tablet:flex-nowrap gap-4 items-center"
       >
@@ -162,12 +179,76 @@
       </div>
     </section>
 
-    <div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <div class="bg-accent">
+      <div
+        class="mx-auto overflow-hidden whitespace-nowrap py-2.5 desktop:py-[20px] max-w-360"
+      >
+        <ul
+          class="flex justify-center gap-4 tablet:gap-[34px] desktop:gap-[64px] animate-ticker-track"
+        >
+          <!-- <ul class="flex gap-4 tablet:gap-[34px] desktop:gap-[64px] animate-ticker-track motion-reduce:animate-none"> -->
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">NO SHORTCUTS</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">NO SHORTCUTS</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">NO SHORTCUTS</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
+          </li>
+          <li class="eyebrow gap-2">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
+          </li>
+          <li class="eyebrow gap-2 desktop:hidden">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
+          </li>
+          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
+          </li>
+          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">NO SHORTCUTS</span>
+          </li>
+          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
+          </li>
+          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- <section id="philosophy">
@@ -383,7 +464,6 @@
         </li>
       </ul>
     </section>
-    -->
 
     <!-- <section id="memberships">
       <p></p>
