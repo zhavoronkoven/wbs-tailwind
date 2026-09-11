@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Geist:wght@400;500;600;700&display=swap"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 
     <title>KRAFTHAUS</title>
 
@@ -599,7 +600,7 @@
             <div class="desktop: px-7 color-secondary">
               <h3 class="text-2xl pt-3">MARA BRANDT</h3>
               <p class="text-accent font-bold text-sm pt-1">
-                Conditioning Specialist
+                CONDITIONING SPECIALIST
               </p>
               <blockquote class="text-text-light pt-2">
                 "Your engine is only as strong as its core pacing."
@@ -642,7 +643,7 @@
             <div class="desktop: px-7 color-secondary">
               <h3 class="text-2xl pt-3">LARS REIMANN</h3>
               <p class="text-accent font-bold text-sm pt-1">
-                Recovery & Anatomy
+                RECOVERY & ANATOMY
               </p>
               <blockquote class="text-text-light pt-2">
                 "Longevity is the ultimate athletic metric."
@@ -1171,5 +1172,42 @@
         </p>
       </div>
     </footer>
+
+    <dialog
+      id="discount-modal"
+      class="bg-card-light rounded-lg p-0 m-auto w-[90%] tablet:w-[480px] backdrop:bg-secondary/70"
+    >
+      <div class="relative p-6 desktop:p-10">
+        <button
+          id="discount-modal-close"
+          type="button"
+          aria-label="Close"
+          class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-text-light hover:text-secondary cursor-pointer"
+        >
+          ✕
+        </button>
+
+        <div class="eyebrow pb-3">
+          <span class="eyebrow-icon"></span>
+          <span class="eyebrow-text">LIMITED OFFER</span>
+        </div>
+
+        <h2 class="text-3xl tablet:text-4xl pb-4">
+          GET 50% OFF YOUR FIRST SESSION
+        </h2>
+
+        <p class="text-text-light pb-6">
+          Fill out the form below or call us directly to claim your discount on
+          your very first session at KRAFTHAUS.
+        </p>
+
+        <div class="flex flex-col gap-3 desktop:flex-row">
+          <a href="#contact" id="discount-modal-cta" class="btn-accent"
+            >Fill the form</a
+          >
+          <a href="tel:+494012345678" class="btn-dark">Call us</a>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
