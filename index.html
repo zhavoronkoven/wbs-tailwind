@@ -17,8 +17,8 @@
 
     <style type="text/tailwindcss">
       @theme {
-        --font-primary: 'Geist', sans-serif;
-        --font-title: 'Big Shoulders Display', sans-serif;
+        --font-primary: "Geist", sans-serif;
+        --font-title: "Big Shoulders Display", sans-serif;
 
         --color-primary: #f2ede3;
         --color-secondary: #191714;
@@ -76,7 +76,7 @@
       }
 
       @utility page-container {
-        @apply container mx-auto px-5 tablet:px-10 tablet:max-w-[1024px] desktop:px-20 desktop:max-w-[1440px];
+        @apply container mx-auto max-w-137.5 px-5 tablet:px-10 tablet:max-w-[1024px] desktop:px-20 desktop:max-w-[1440px];
       }
 
       @utility section-title {
@@ -98,6 +98,10 @@
       }
       @utility nav-item {
         @apply uppercase font-semibold text-text-dark text-[11px] desktop:text-lg;
+      }
+
+      @utility tag {
+        @apply inline-block uppercase font-semibold tracking-wide text-text-dark bg-secondary border border-stroke-light px-2 py-1 text-[9px] desktop:px-3 desktop:py-1.5 desktop:text-xs;
       }
 
       @utility btn-light {
@@ -229,9 +233,13 @@
           </li>
           <li class="eyebrow gap-2">
             <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
+            <span class="ticker-track-text">KRAFTHAUS HAMBURG</span>
           </li>
           <li class="eyebrow gap-2 desktop:hidden">
+            <span class="ticker-track-icon"></span>
+            <span class="ticker-track-text">NO SHORTCUTS</span>
+          </li>
+          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
             <span class="ticker-track-icon"></span>
             <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
           </li>
@@ -242,10 +250,6 @@
           <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
             <span class="ticker-track-icon"></span>
             <span class="ticker-track-text">NO SHORTCUTS</span>
-          </li>
-          <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
-            <span class="ticker-track-icon"></span>
-            <span class="ticker-track-text">UNCOMPROMISING STRENGTH</span>
           </li>
           <li class="eyebrow gap-2 hidden tablet:inline desktop:hidden">
             <span class="ticker-track-icon"></span>
@@ -263,7 +267,7 @@
         <div
           class="flex flex-col gap-4 tablet:gap-5 desktop:gap-10 tablet:max-w-[324px] desktop:max-w-167.5 tablet:justify-center"
         >
-          <div class="flex flex-col desktop:gap-4">
+          <div class="flex flex-col gap-2 desktop:gap-4">
             <p class="eybrow">
               <span class="eyebrow-icon"></span>
               <span class="eyebrow-text">The Manifesto</span>
@@ -284,7 +288,7 @@
             <li class="flex flex-col gap-px">
               <div class="flex gap-2 items-center">
                 <span
-                  class="bg-accent  text-center px-1.5 py-1 text-accent-secondary text-[9px] desktop:text-lg font-title w-4.25 desktop:w-8 h-4.25 desktop:h-8"
+                  class="bg-accent text-center px-1.5 py-1 text-accent-secondary text-[9px] desktop:text-lg font-title w-4.25 desktop:w-8 h-4.25 desktop:h-8"
                   >1</span
                 >
 
@@ -341,79 +345,192 @@
         <div
           class="col-span-2 flex flex-col justify-between gap-4 tablet:gap-5 desktop:gap-10"
         >
-          <h3 class="text-xl desktop:text-[40px]">Built by coaches, not a franchise template.</h3>
+          <h3 class="text-xl desktop:text-[40px]">
+            Built by coaches, not a franchise template.
+          </h3>
           <dl class="flex justify-between">
-            <div class="tablet:w-full tablet:min-w-[63px] ">
-              <dt class="font-title text-xl desktop:text-3xl font-black">2019</dt>
-              <dd class="text-text-dark font-primary desktop:text-base">Founded</dd>
+            <div class="tablet:w-full tablet:min-w-[63px]">
+              <dt class="font-title text-xl desktop:text-3xl font-black">
+                2019
+              </dt>
+              <dd class="text-text-dark font-primary desktop:text-base">
+                Founded
+              </dd>
             </div>
-            <div class="tablet:w-full tablet:min-w-[63px] ">
-              <dt class="font-title text-xl desktop:text-3xl font-black">450+</dt>
-              <dd class="text-text-dark font-primary desktop:text-base">Members</dd>
+            <div class="tablet:w-full tablet:min-w-[63px]">
+              <dt class="font-title text-xl desktop:text-3xl font-black">
+                450+
+              </dt>
+              <dd class="text-text-dark font-primary desktop:text-base">
+                Members
+              </dd>
             </div>
-            <div class="tablet:w-full tablet:min-w-[63px] ">
+            <div class="tablet:w-full tablet:min-w-[63px]">
               <dt class="font-title text-xl desktop:text-3xl font-black">7</dt>
-              <dd class="text-text-dark font-primary desktop:text-base">Coaches</dd>
+              <dd class="text-text-dark font-primary desktop:text-base">
+                Coaches
+              </dd>
             </div>
-            <div class="tablet:w-full tablet:min-w-[63px] ">
-              <dt class="font-title text-xl desktop:text-3xl font-black">600m²</dt>
-              <dd class="text-text-dark font-primary desktop:text-base">Studio size</dd>
+            <div class="tablet:w-full tablet:min-w-[63px]">
+              <dt class="font-title text-xl desktop:text-3xl font-black">
+                600m²
+              </dt>
+              <dd class="text-text-dark font-primary desktop:text-base">
+                Studio size
+              </dd>
             </div>
           </dl>
         </div>
       </div>
     </section>
 
-    <!-- <section id="programs">
-        <p></p>
-        <h2></h2>
-        <p></p>
+    <section class="bg-secondary" id="programs">
+      <div class="page-container">
+        <div
+          class="flex flex-col gap-2 desktop:gap-4 mb-8 tablet:mb-10 desktop:mb-16"
+        >
+          <p class="eyebrow">
+            <span class="eyebrow-icon"></span>
+            <span class="eyebrow-text">Training Programs</span>
+          </p>
+          <h2 class="section-title text-primary my-0">
+            Built for Raw Power and Longevity
+          </h2>
+          <p>
+            Our training is segmented into focused physical disciplines. Run on
+            a rolling seasonal cycle.
+          </p>
+        </div>
 
-        <ul>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <p></p>
-              <h3></h3>
-              <p></p>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <a href=""></a>
+        <ul class="grid grid-cols-1 tablet:grid-cols-3 gap-6 tablet:gap-8">
+          <li class="bg-card-dark border border-stroke-light">
+            <article class="flex h-full flex-col">
+              <img
+                src="./images/programs/kraft-program.png"
+                alt="Loaded barbell with weight plates resting on the studio floor"
+                class="aspect-3/2 w-full object-cover"
+              />
+              <div class="flex flex-1 flex-col p-4 desktop:p-8">
+                <h3 class="card-title text-primary mb-2 desktop:mb-4">
+                  Kraft / Strength
+                </h3>
+                <p class="mb-4 desktop:mb-6">
+                  Pure barbell mechanics, heavy compounds, and progressive
+                  overload. Structured around powerlifts and raw athletic
+                  resistance to build skeletal density.
+                </p>
+                <ul
+                  class="mt-auto mb-4 flex flex-wrap gap-1.5 desktop:mb-6 desktop:gap-2"
+                >
+                  <li class="tag">Barbell</li>
+                  <li class="tag">Powerlifting</li>
+                  <li class="tag">Hypertrophy</li>
+                </ul>
+                <a
+                  href="#form"
+                  class="group flex items-center justify-between border-t border-stroke-light pt-4 outline-none transition-colors duration-200 hover:border-accent focus-visible:border-accent  focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent desktop:pt-6"
+                >
+                  <span
+                    class="font-title text-[11px] uppercase tracking-wide text-primary transition-colors duration-200 group-hover:text-accent group-focus-visible:text-accent desktop:text-base"
+                  >
+                    Booking
+                  </span>
+                  <img
+                    src="./icons/arrow-right.svg"
+                    alt=""
+                    class="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1 desktop:h-4 desktop:w-4"
+                  />
+                </a>
+              </div>
             </article>
           </li>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <p></p>
-              <h3></h3>
-              <p></p>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <a href=""></a>
+
+          <li class="bg-card-dark border border-stroke-light">
+            <article class="flex h-full flex-col">
+              <img
+                src="./images/programs/conditioning-program.png"
+                alt="Athlete pushing a weighted sled across the studio floor"
+                class="aspect-3/2 w-full object-cover"
+              />
+              <div class="flex flex-1 flex-col p-4 desktop:p-8">
+                <h3 class="card-title text-primary mb-2 desktop:mb-4">
+                  Conditioning / HIT
+                </h3>
+                <p class="mb-4 desktop:mb-6">
+                  High intensity operational engines. Incorporates sleds,
+                  rowers, assault bikes and kettlebells to build an explosive
+                  aerobic and anaerobic threshold.
+                </p>
+                <ul
+                  class="mt-auto mb-4 flex flex-wrap gap-1.5 desktop:mb-6 desktop:gap-2"
+                >
+                  <li class="tag">Kettlebell</li>
+                  <li class="tag">Sled Pushes</li>
+                  <li class="tag">Anaerobic</li>
+                </ul>
+                <a
+                  href="#form"
+                  class="group flex items-center justify-between border-t border-stroke-light pt-4 outline-none transition-colors duration-200 hover:border-accent focus-visible:border-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent desktop:pt-6"
+                >
+                  <span
+                    class="font-title text-[11px] uppercase tracking-wide text-primary transition-colors duration-200 group-hover:text-accent group-focus-visible:text-accent desktop:text-base"
+                  >
+                    Booking
+                  </span>
+                  <img
+                    src="./icons/arrow-right.svg"
+                    alt=""
+                    class="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1 desktop:h-4 desktop:w-4"
+                  />
+                </a>
+              </div>
             </article>
           </li>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <p></p>
-              <h3></h3>
-              <p></p>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <a href=""></a>
+
+          <li class="bg-card-dark border border-stroke-light">
+            <article class="flex h-full flex-col">
+              <img
+                src="./images/programs/mobility-program.png"
+                alt="Athlete performing a mobility exercise in a lunge position"
+                class="aspect-3/2 w-full object-cover"
+              />
+              <div class="flex flex-1 flex-col p-4 desktop:p-8">
+                <h3 class="card-title text-primary mb-2 desktop:mb-4">
+                  Mobility / Resilience
+                </h3>
+                <p class="mb-4 desktop:mb-6">
+                  Structural joint integrity, active stretching, and restorative
+                  postures. Designed to bulletproof connective tissues and
+                  accelerate structural recovery.
+                </p>
+                <ul
+                  class="mt-auto mb-4 flex flex-wrap gap-1.5 desktop:mb-6 desktop:gap-2"
+                >
+                  <li class="tag">Anatomy</li>
+                  <li class="tag">Joint Mobility</li>
+                  <li class="tag">Recovery</li>
+                </ul>
+                <a
+                  href="#form"
+                  class="group flex items-center justify-between border-t border-stroke-light pt-4 outline-none transition-colors duration-200 hover:border-accent focus-visible:border-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent desktop:pt-6"
+                >
+                  <span
+                    class="font-title text-[11px] uppercase tracking-wide text-primary transition-colors duration-200 group-hover:text-accent group-focus-visible:text-accent desktop:text-base"
+                  >
+                    Booking
+                  </span>
+                  <img
+                    src="./icons/arrow-right.svg"
+                    alt=""
+                    class="h-3 w-3 transition-transform duration-200 group-hover:translate-x-1 group-focus-visible:translate-x-1 desktop:h-4 desktop:w-4"
+                  />
+                </a>
+              </div>
             </article>
           </li>
         </ul>
-    </section> -->
+      </div>
+    </section>
 
     <section class="bg-primary px-5 tablet:px-10 desktop:px-20" id="coaches">
       <p class="relative pl-4 pb-2"></p>
@@ -467,7 +584,9 @@
             />
             <div class="px-5 tablet:px-10 desktop:px-20 color-secondary">
               <h3 class="text-2xl pt-3">MARA BRANDT</h3>
-              <p class="text-accent font-bold text-sm pt-1">CONDITIONING SPECIALIST</p>
+              <p class="text-accent font-bold text-sm pt-1">
+                CONDITIONING SPECIALIST
+              </p>
               <blockquote class="text-text-light pt-2">
                 "Your engine is only as strong as its core pacing."
               </blockquote>
@@ -497,7 +616,9 @@
             />
             <div class="px-5 tablet:px-10 desktop:px-20 color-secondary">
               <h3 class="text-2xl pt-3">LARS REIMANN</h3>
-              <p class="text-accent font-bold text-sm pt-1">RECOVERY & ANATOMY</p>
+              <p class="text-accent font-bold text-sm pt-1">
+                RECOVERY & ANATOMY
+              </p>
               <blockquote class="text-text-light pt-2">
                 "Longevity is the ultimate athletic metric."
               </blockquote>
@@ -520,7 +641,6 @@
         </li>
       </ul>
     </section>
-
 
     <section class="bg-secondary text-primary" id="memberships">
       <div class="page-container px-3">
@@ -576,7 +696,9 @@
                 <div>
                   <h3 class="text-3xl pt-5 pb-5 text-white">PERFORMANCE</h3>
                 </div>
-                <div><p class="mt-6 p-0.5 bg-[#D6322A] text-xs">RECOMMENDED</p></div>
+                <div>
+                  <p class="mt-6 p-0.5 bg-[#D6322A] text-xs">RECOMMENDED</p>
+                </div>
               </div>
               <p class="pb-4">
                 <span class="text-5xl">€129</span>
@@ -651,7 +773,6 @@
         </li>
       </ul>
     </section>
- 
 
     <!-- <section id="community">
       <img src="" alt="" />
@@ -758,6 +879,7 @@
 
         <div class="lg:w-3/5 lg:pl-10">
           <form
+            id="form"
             action="#"
             method="POST"
             class="flex flex-col bg-white p-10 rounded-lg border border-stroke-dark shadow-xl"
