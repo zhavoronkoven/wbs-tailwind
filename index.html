@@ -18,8 +18,8 @@
 
     <style type="text/tailwindcss">
       @theme {
-        --font-primary: 'Geist', sans-serif;
-        --font-title: 'Big Shoulders Display', sans-serif;
+        --font-primary: "Geist", sans-serif;
+        --font-title: "Big Shoulders Display", sans-serif;
 
         --color-primary: #f2ede3;
         --color-secondary: #191714;
@@ -124,12 +124,18 @@
       @utility ticker-track-icon {
         @apply eyebrow-icon w-1 desktop:w-2 h-1 desktop:h-2 bg-accent-secondary;
       }
+
+      @utility burger-line {
+        @apply block h-0.5 w-5 bg-primary transition-all duration-300;
+      }
     </style>
   </head>
   <body>
-    <header class="bg-secondary py-5 tablet:py-4 desktop:p">
+    <header
+      class="sticky top-0 z-50 bg-secondary py-5 tablet:py-4 desktop:py-6"
+    >
       <div
-        class="page-container flex flex-col justify-between tablet:flex-row flex-wrap tablet:flex-nowrap gap-4 items-center"
+        class="page-container relative z-50 flex items-center justify-between gap-4"
       >
         <a class="eyebrow" href="#top">
           <span class="bg-accent w-3.25 h-3.25 desktop:w-6 desktop:h-6"></span>
@@ -139,22 +145,63 @@
           >
         </a>
 
-        <nav aria-label="Main navigation">
-          <ul class="flex flex-wrap justify-center items-center gap-4">
-            <li class="nav-item"><a href="#programs"></a>programs</li>
-            <li class="nav-item"><a href="#philosophy"></a>philosophy</li>
-            <li class="nav-item"><a href="#coaches"></a>coaches</li>
-            <li class="nav-item"><a href="#memberships"></a>memberships</li>
-            <li class="nav-item"><a href="#location"></a>location</li>
-            <li class="nav-item"><a href="#contact"></a>contact</li>
+        <nav aria-label="Main navigation" class="hidden tablet:block">
+          <ul class="flex flex-wrap items-center justify-center gap-4">
+            <li class="nav-item"><a href="#programs">Programs</a></li>
+            <li class="nav-item"><a href="#philosophy">Philosophy</a></li>
+            <li class="nav-item"><a href="#coaches">Coaches</a></li>
+            <li class="nav-item"><a href="#memberships">Memberships</a></li>
+            <li class="nav-item"><a href="#location">Location</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <a
-          class="btn-accent tablet:min-w-0 desktop:min-w-[200px]"
-          href="#contact"
+          class="btn-accent hidden tablet:inline-block tablet:min-w-0 desktop:min-w-[200px]"
+          href="#form"
           >Join the Haus</a
         >
+
+        <button
+          type="button"
+          id="menu-toggle"
+          class="group flex h-11 w-11 flex-col items-center justify-center gap-1 outline-none tablet:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Toggle menu"
+        >
+          <span
+            class="burger-line origin-center group-hover:bg-accent group-aria-expanded:translate-y-1.5 group-aria-expanded:rotate-45"
+          ></span>
+          <span
+            class="burger-line group-hover:bg-accent group-aria-expanded:opacity-0"
+          ></span>
+          <span
+            class="burger-line origin-center group-hover:bg-accent group-aria-expanded:-translate-y-1.5 group-aria-expanded:-rotate-45"
+          ></span>
+        </button>
+      </div>
+
+      <div
+        id="mobile-nav"
+        class="fixed inset-0 z-40 hidden overflow-y-auto bg-secondary tablet:hidden"
+      >
+        <div class="page-container flex min-h-full flex-col px-5 pb-10 pt-24">
+          <nav aria-label="Mobile navigation">
+            <ul class="flex flex-col items-start gap-6">
+              <li class="nav-item"><a href="#programs">Programs</a></li>
+              <li class="nav-item"><a href="#philosophy">Philosophy</a></li>
+              <li class="nav-item"><a href="#coaches">Coaches</a></li>
+              <li class="nav-item"><a href="#memberships">Memberships</a></li>
+              <li class="nav-item"><a href="#location">Location</a></li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <a class="btn-accent mt-auto block text-center" href="#form"
+            >Join the Haus</a
+          >
+        </div>
       </div>
     </header>
 
@@ -683,180 +730,174 @@
     </section>
 
     <section class="bg-secondary text-primary" id="memberships">
-        <div class="page-container">
-          <div class="eyebrow pl-2">
-            <span class="eyebrow-icon"></span>
-            <span class="eyebrow-text">MEMBERSHIP TIERS</span>
-          </div>
-          <h2 class="text-primary text-5xl pb-3 pl-2 pt-3">
-            CHOOSE YOUR COMMITMENT LEVEL
-          </h2>
-          <p class="text-light text-l pl-2">
-            Uncompromised access. All tiers include close programmed guidance.
-            No registration fees.
-          </p>
-          <ul
-            class="my-4 p-3 pb-3 grid grid-cols-1 desktop:grid-cols-3 gap-6 desktop:gap-8"
-          >
-            <li class="relative pl-2 mt-4 bg-primary text-secondary">
-              <article>
-                <div class="p-3">
-                  <h3 class="text-3xl pt-5 pb-5">BASE CAMP</h3>
-                  <p class="pb-4">
-                    <span class="text-7xl text-black font-bold">€89</span>
-                    <span class="eyebrow-text text-black">/month</span>
-                  </p>
-                  <p
-                    class="text-xl pb-3 border-b border-black opacity-400 my-4"
-                  >
-                    Essential strength and conditioning access for structured
-                    lifters.
-                  </p>
-                  <ul class="space-y-4 text-sm desktop:text-base pb-10">
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />3 programmed classes per week
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />Basic workout logging profile
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />Access to warm facilities & lockers
-                    </li>
-                  </ul>
-                  <div class="pb-4 pt-8 flex justify-center">
-                    <button class="btn-dark w-full">SELECT PLAN</button>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="relative mt-4">
-              <article>
-                <div class="p-3 border border-[#D6322A]">
-                  <div class="flex flex-row desktop:flex-row gap-3">
-                    <div>
-                      <h3 class="text-3xl pt-5 pb-5 text-white">PERFORMANCE</h3>
-                    </div>
-                    <div>
-                      <p
-                        class="text-white mt-6 desktop:mt-6 p-0.5 bg-accent text-xs"
-                      >
-                        RECOMMENDED
-                      </p>
-                    </div>
-                  </div>
-                  <p class="pb-4">
-                    <span class="text-7xl text-white font-bold">€129</span>
-                    <span class="eyebrow-text text-white">/month</span>
-                  </p>
-                  <p
-                    class="text-xl pb-3 border-b border-white opacity-400 my-4"
-                  >
-                    Optimized tier for committed athletes aiming for progressive
-                    development.
-                  </p>
-                  <ul class="space-y-4 text-sm desktop:text-base pb-10">
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />Unlimited class access
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />Custom monthly metric reviews
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />1 Restoration/Mobility clinic per month
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />Priority class waitlist allocation
-                    </li>
-                  </ul>
-                  <div class="pb-4 flex justify-center">
-                    <button
-                      class="btn-dark w-full btn-accent text-white border-accent"
-                    >
-                      SELECT PLAN
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="relative pl-2 mt-4 bg-primary text-secondary">
-              <article>
-                <div class="p-3">
-                  <h3 class="text-3xl pt-5 pb-5">ELITE / ATHLETE</h3>
-                  <p class="pb-4">
-                    <span class="text-7xl text-black font-bold">€199</span>
-                    <span class="eyebrow-text text-black">/month</span>
-                  </p>
-                  <p
-                    class="text-xl pb-3 border-b border-black opacity-400 my-4"
-                  >
-                    Complete bespoke preparation for competitive athletes.
-                  </p>
-                  <ul class="space-y-4 text-sm desktop:text-base pb-10">
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />Unlimited class access
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />Bimonthly 1-on-1 coach assessment
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />Bespoke nutrition planning & analysis
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <img
-                        src="icons/check-circle.svg"
-                        alt="check"
-                        class="h-5"
-                      />BUnlimited access to recovery zone
-                    </li>
-                  </ul>
-                  <div class="pb-4 flex justify-center">
-                    <button class="btn-dark w-full">SELECT PLAN</button>
-                  </div>
-                </div>
-              </article>
-            </li>
-          </ul>
+      <div class="page-container">
+        <div class="eyebrow pl-2">
+          <span class="eyebrow-icon"></span>
+          <span class="eyebrow-text">MEMBERSHIP TIERS</span>
         </div>
+        <h2 class="text-primary text-5xl pb-3 pl-2 pt-3">
+          CHOOSE YOUR COMMITMENT LEVEL
+        </h2>
+        <p class="text-light text-l pl-2">
+          Uncompromised access. All tiers include close programmed guidance. No
+          registration fees.
+        </p>
+        <ul
+          class="my-4 p-3 pb-3 grid grid-cols-1 desktop:grid-cols-3 gap-6 desktop:gap-8"
+        >
+          <li class="relative pl-2 mt-4 bg-primary text-secondary">
+            <article>
+              <div class="p-3">
+                <h3 class="text-3xl pt-5 pb-5">BASE CAMP</h3>
+                <p class="pb-4">
+                  <span class="text-7xl text-black font-bold">€89</span>
+                  <span class="eyebrow-text text-black">/month</span>
+                </p>
+                <p class="text-xl pb-3 border-b border-black opacity-400 my-4">
+                  Essential strength and conditioning access for structured
+                  lifters.
+                </p>
+                <ul class="space-y-4 text-sm desktop:text-base pb-10">
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />3 programmed classes per week
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />Basic workout logging profile
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />Access to warm facilities & lockers
+                  </li>
+                </ul>
+                <div class="pb-4 pt-8 flex justify-center">
+                  <button class="btn-dark w-full">SELECT PLAN</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="relative mt-4">
+            <article>
+              <div class="p-3 border border-[#D6322A]">
+                <div class="flex flex-row desktop:flex-row gap-3">
+                  <div>
+                    <h3 class="text-3xl pt-5 pb-5 text-white">PERFORMANCE</h3>
+                  </div>
+                  <div>
+                    <p
+                      class="text-white mt-6 desktop:mt-6 p-0.5 bg-accent text-xs"
+                    >
+                      RECOMMENDED
+                    </p>
+                  </div>
+                </div>
+                <p class="pb-4">
+                  <span class="text-7xl text-white font-bold">€129</span>
+                  <span class="eyebrow-text text-white">/month</span>
+                </p>
+                <p class="text-xl pb-3 border-b border-white opacity-400 my-4">
+                  Optimized tier for committed athletes aiming for progressive
+                  development.
+                </p>
+                <ul class="space-y-4 text-sm desktop:text-base pb-10">
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />Unlimited class access
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />Custom monthly metric reviews
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />1 Restoration/Mobility clinic per month
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />Priority class waitlist allocation
+                  </li>
+                </ul>
+                <div class="pb-4 flex justify-center">
+                  <button
+                    class="btn-dark w-full btn-accent text-white border-accent"
+                  >
+                    SELECT PLAN
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="relative pl-2 mt-4 bg-primary text-secondary">
+            <article>
+              <div class="p-3">
+                <h3 class="text-3xl pt-5 pb-5">ELITE / ATHLETE</h3>
+                <p class="pb-4">
+                  <span class="text-7xl text-black font-bold">€199</span>
+                  <span class="eyebrow-text text-black">/month</span>
+                </p>
+                <p class="text-xl pb-3 border-b border-black opacity-400 my-4">
+                  Complete bespoke preparation for competitive athletes.
+                </p>
+                <ul class="space-y-4 text-sm desktop:text-base pb-10">
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />Unlimited class access
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />Bimonthly 1-on-1 coach assessment
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />Bespoke nutrition planning & analysis
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img
+                      src="icons/check-circle.svg"
+                      alt="check"
+                      class="h-5"
+                    />BUnlimited access to recovery zone
+                  </li>
+                </ul>
+                <div class="pb-4 flex justify-center">
+                  <button class="btn-dark w-full">SELECT PLAN</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="bg-primary" id="community">
@@ -1005,23 +1046,39 @@
             motivating community. No commitment required.
           </p>
 
-          <address class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-dark">
-            <p class="mb-8 pl-8 bg-[url(icons/map-pin.svg)] bg-no-repeat bg-left text-secondary">
-              <span class="block text-text-dark uppercase text-sm">Location</span>
+          <address
+            class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-dark"
+          >
+            <p
+              class="mb-8 pl-8 bg-[url(icons/map-pin.svg)] bg-no-repeat bg-left text-secondary"
+            >
+              <span class="block text-text-dark uppercase text-sm"
+                >Location</span
+              >
               Stresemannstraße 375<br />
               22761 Althona, Hamburg
             </p>
 
-            <p class="mb-8 pl-8 bg-[url(icons/clock.svg)] bg-no-repeat bg-left text-secondary">
-              <span class="block text-text-dark uppercase text-sm">Club hours</span>
+            <p
+              class="mb-8 pl-8 bg-[url(icons/clock.svg)] bg-no-repeat bg-left text-secondary"
+            >
+              <span class="block text-text-dark uppercase text-sm"
+                >Club hours</span
+              >
               Mon–Fri 06:00–22:00<br />
               Sat 08:00–18:00<br />
               Sun 09:00–16:00
             </p>
 
-            <p class="pl-8 bg-[url(icons/phone.svg)] bg-no-repeat bg-left text-secondary">
-              <span class="block text-text-dark uppercase text-sm">Phone Support</span>
-              <a href="tel:+494012345678" title="Contact us">+49 40 1234 5678</a>
+            <p
+              class="pl-8 bg-[url(icons/phone.svg)] bg-no-repeat bg-left text-secondary"
+            >
+              <span class="block text-text-dark uppercase text-sm"
+                >Phone Support</span
+              >
+              <a href="tel:+494012345678" title="Contact us"
+                >+49 40 1234 5678</a
+              >
             </p>
           </address>
         </div>
@@ -1142,15 +1199,25 @@
             quaerat enim?
           </p>
 
-          <address class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-light">
-            <p class="mb-8 text-white pl-8 bg-[url(icons/map-pin.svg)] bg-no-repeat bg-left">
-              <span class="block text-text-dark uppercase text-sm">Location</span>
+          <address
+            class="m-0 mt-5 lg:mt-10 p-0 pt-5 lg:pt-10 bt-1 not-italic border-t border-stroke-light"
+          >
+            <p
+              class="mb-8 text-white pl-8 bg-[url(icons/map-pin.svg)] bg-no-repeat bg-left"
+            >
+              <span class="block text-text-dark uppercase text-sm"
+                >Location</span
+              >
               Stresemannstraße 375<br />
               22761 Althona, Hamburg
             </p>
 
-            <p class="text-white pl-8 bg-[url(icons/clock.svg)] bg-no-repeat bg-left">
-              <span class="block text-text-dark uppercase text-sm">Club hours</span>
+            <p
+              class="text-white pl-8 bg-[url(icons/clock.svg)] bg-no-repeat bg-left"
+            >
+              <span class="block text-text-dark uppercase text-sm"
+                >Club hours</span
+              >
               Mon–Fri 06:00–22:00<br />
               Sat 08:00–18:00<br />
               Sun 09:00–16:00
@@ -1221,7 +1288,9 @@
             <div class="w-1/2 lg:w-1/4 mb-4 pr-4">
               <h3 class="text-accent mb-4">CONTACT</h3>
               <address class="text-sm not-italic">
-                <p class="mb-2 text-sm">Stresemannstraße 375, 22761 Altona, Hamburg</p>
+                <p class="mb-2 text-sm">
+                  Stresemannstraße 375, 22761 Altona, Hamburg
+                </p>
                 <p class="mb-2 text-sm">
                   <a href="tel:+494012345678">+49 40 1234 5678</a>
                 </p>
