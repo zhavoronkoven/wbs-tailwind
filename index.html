@@ -33,6 +33,16 @@
 
         --breakpoint-tablet: 768px;
         --breakpoint-desktop: 1440px;
+         --animate-ticker-track: scroll 20s linear infinite;
+
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
       }
 
       @layer base {
@@ -106,6 +116,12 @@
 
       @utility input-wrapper {
         @apply w-full flex flex-col gap-1 desktop:gap-2;
+      }
+        @utility ticker-track-text {
+        @apply eyebrow-text text-xs tablet:text-sm desktop:text-2xl uppercase font-title  text-accent-secondary;
+      }
+      @utility ticker-track-icon {
+        @apply eyebrow-icon w-1 desktop:w-2 h-1 desktop:h-2 bg-accent-secondary;
       }
     </style>
   </head>
